@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --orange:#ffa500;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background-color: var(--orange);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+
+}
+
+.error{
+    color:red;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.btn:hover{
+    background: rgba(255,255,255,0.2);
+    color: var(--orange);
+}
+
+
+.navbar-section{
+
+}
+
+ header{
+ background:brown;
+    position: relative;
+    top: 0px;
+    background: #222;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    width:100vw;
+    height:10vh;
+ }
+ header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+
+
+ }
+ header .logo span{
+    color:var(--orange);
+
+ }
+
+ header .navbar a{
+    color: #fff;
+    font-size: 2rem ;
+    margin:0 .8rem;
+    text-decoration:none;
+ }
+
+ header .navbar a:hover {
+    color: var(--orange);
+}
+
+header .icons i{
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1.2rem;
+}
+
+
+ header .icons i:hover{
+    color: var(--orange);
+
+ }
+
+
+
+
+header .search-bar-container {
+border:2px solid blue;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden initially */
+    transition: clip-path 0.5s ease;
+}
+
+header .search-bar-container.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Reveals the search bar */
+}
+
+
+
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-left: .5rem;
+
+}
+header .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+    color: var(--orange);
+}
+.login-form-container {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease-in-out;
+}
+
+.login-form-container.active {
+  top: 0;
+}
+
+.login-form-container form {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+  border-top: 4px solid #ff8c00;
+  position: relative;
+}
+
+.login-form-container form h3 {
+  color: #007bff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.login-form-container form .box {
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0.7rem 0;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form-container form .box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.login-form-container form .btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #007bff, #ff8c00);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form-container form .btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.login-form-container form label {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.login-form-container form p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.login-form-container form p a {
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-form-container form p a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.login-form-container form .error{
+    color:red;
+    margin-bottom:10px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#form-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #ff8c00;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#form-close:hover {
+  color: #007bff;
+  transform: rotate(90deg);
+}
+#menu-bar{
+color:white;
+}
+
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: flex-start;
+}
+.check {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            justify-content: flex-start;
+            color:black;
+    }
+
+
+
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+}
+
+#search-bar {
+    flex: 1;
+    height: 45px;       /* You can adjust */
+    padding: 10px 15px;
+    font-size: 16px;
+
+}
+
+.search-bar-container button {
+    height: 45px;       /* SAME height as input */
+    width: 50px;        /* Adjust for design */
+    border: none;
+    background: #0097b2;   /* Nice color */
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0; /* Rounded right side */
+}
+
+
+
+
+
+
+
+
+/* ---------- Responsive additions ONLY (append to navbar.css) ---------- */
+
+/* keep original look on desktop; only change layout at breakpoints */
+
+/* make header box-sizing safe for mobile */
+header { box-sizing: border-box; }
+
+/* show hamburger only on small screens — default remains hidden in your file */
+#menu-bar { display: none; }
+
+/* small adjustments to spacing on medium screens */
+@media (max-width: 992px) {
+  /* show hamburger */
+  #menu-bar {
+    display: block;
+    font-size: 2.8rem;
+    padding: .45rem .9rem;
+    border-radius: .4rem;
+    border: 0.15rem solid rgba(255,255,255,0.06);
+    background: transparent;
+  }
+
+  /* hide desktop links by default (they will open when .active is added by JS) */
+  header .navbar {
+    display: none;
+    position: absolute;
+    top: calc(100% + .6rem);
+    left: 0;
+    right: 0;
+    background: #222;              /* same background */
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    gap: .6rem;
+    border-top: .1rem solid rgba(255,255,255,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    z-index: 9999;
+  }
+
+  /* when JS toggles .active it becomes visible */
+  header .navbar.active { display: flex; }
+
+  /* link styles adapt to stacked layout but keep colours */
+  header .navbar a {
+    display: block;
+    width: 100%;
+    padding: .9rem 1rem;
+    font-size: 1.7rem;
+    border-radius: .35rem;
+  }
+
+  /* push icons to right so they remain visible */
+  header .icons { margin-left: auto; }
+
+  /* reposition search bar to fit mobile (keeps same appearance) */
+  header .search-bar-container {
+    left: 1rem;
+    right: 1rem;
+    min-width: unset;
+    max-width: none;
+    top: calc(100% + .6rem);
+    border-radius: .5rem;
+  }
+}
+
+/* extra-tight tweaks for very small phones */
+@media (max-width: 520px) {
+  header { padding: 1rem; }
+  header .logo { font-size: 2rem; }
+  header .navbar a { font-size: 1.5rem; padding: .8rem .6rem; }
+  header .icons i { font-size: 2.0rem; }
+  header .search-bar-container #search-bar { font-size: 1.4rem; padding: .6rem .8rem; }
+  #menu-bar { font-size: 2.1rem; padding: .3rem .6rem; }
+}
+
+/* keep header full-width and prevent overlap with content:
+   adds the same safe top spacing as you already use for other sections */
+@media (min-width: 0) {
+  /* ensures fixed header doesn't overlap content — matches your existing scroll-padding */
+  body { scroll-padding-top: calc(6rem + 0px); }
+}
+
+
+
+
+@media (max-width: 768px){
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+header {
+  max-width: 100%;
+  overflow: visible; /* allow dropdown to expand normally */
+}
+
+}
+/* logged in */
+
+/* Icons container */
+header .icons{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+}
+
+/* Search icon */
+#search-btn{
+    font-size:2.4rem;
+    cursor:pointer;
+}
+
+/* Profile avatar */
+
+.profile-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#FFA500;
+    color:white;
+    font-size:1.7rem;
+    font-weight:700;
+
+    text-decoration:none;
+
+    box-shadow:0 4px 12px rgba(255,165,0,.35);
+
+    transition:.3s ease;
+}
+
+.profile-avatar:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(255,165,0,.45);
+}

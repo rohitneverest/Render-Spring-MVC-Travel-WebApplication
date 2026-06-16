@@ -1,0 +1,135 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+.profile-container{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+/* Header */
+
+.profile-header{
+background:white;
+border-radius:20px;
+padding:30px;
+display:flex;
+align-items:center;
+gap:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+background:linear-gradient(135deg,#007bff,#ff8c00);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:48px;
+}
+
+.user-info h1{
+color:#222;
+margin-bottom:8px;
+}
+
+.user-info p{
+color:#666;
+font-size:16px;
+}
+
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:#e9f3ff;
+color:#007bff;
+border-radius:20px;
+font-weight:600;
+}
+
+
+
+/* Sections */
+
+.section{
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.section-title{
+margin-bottom:20px;
+color:#007bff;
+}
+
+/* Activity */
+
+.activity-item{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.activity-item:last-child{
+border:none;
+}
+
+/* Buttons */
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+margin-right:10px;
+}
+
+.edit-btn{
+background:#007bff;
+color:white;
+}
+
+.logout-btn{
+background:#dc3545;
+color:white;
+}
+
+/* Booking Cards */
+
+.booking-card{
+border:1px solid #eee;
+padding:15px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.booking-card h4{
+color:#333;
+margin-bottom:5px;
+}
+
+.status{
+color:green;
+font-weight:bold;
+}
+
+.quote{
+font-style:italic;
+color:#777;
+text-align:center;
+margin-top:15px;
+}

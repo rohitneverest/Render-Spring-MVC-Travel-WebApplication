@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* here sliding  style starts here */
+
+
+
+
+
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  background: black;
+}
+
+body > footer {
+  margin-top: auto; /* pushes footer to bottom */
+}
+
+.protect-top-slider {
+  position: relative;
+  top: 0vh;
+  padding: 0px;
+  z-index: 40;
+
+  height: 80vh;
+
+}
+
+.top-slider-pictures-section {
+  position: relative;
+  z-index: 4;
+  top: 0px;
+
+  margin: 0px;
+
+  padding-bottom: 2px;
+
+  width: 100%;
+  height: auto;
+}
+.container{
+position:relative;
+
+}
+.container .slide {
+  /*border:2px solid yellow;*/
+  position: absolute; /* Now the absolute items are inside this container */
+  top:0px;
+  width: 100%;
+  height: 90vh; /* adjust to your slider height */
+  overflow: hidden; /* prevents items from spilling outside */
+
+}
+.container .slide .item {
+
+  width: 200px;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #0e0e0e;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+
+
+}
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  border: 3px solid rgb(5, 5, 5);
+   background:black;
+}
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+/*background:red;*/
+flex-shrink:1;
+
+word-wrap:break-word;
+
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 40vmax;
+  height:50vmax;
+  height:auto;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;  /*doesnt display the the others content*/
+}
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+.content .name {
+
+  font-size: 300%;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+.content .des {
+  font-size: 150%;
+
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+.content button {
+  padding: 10px 20px;
+  margin-top:10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+
+
+}
+.content button:hover{
+background:orange;
+}
+
+
+/* slide karne wala left right button */
+
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+.button {
+
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  right:7rem;
+  z-index:500;
+  margin-bottom:15px;
+}
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+.button button:hover {
+  background: orange;
+  color: #fff;
+}
+/* trail */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+
+
+
+/* Visit Country Section */
+.visit-country-section {
+  background-color: black; /* Dark background */
+  /*border:2px solid green;*/
+  position: relative;
+  z-index: 4;
+  top: 6rem;
+
+  width: 100vw;
+  height: auto;
+  color: #fff;
+
+  padding: 6em 3em;
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
+}
+
+.visit-country-section .section-heading {
+  text-align: center;
+}
+
+.visit-country-section .section-heading h2 {
+  font-size: 36px;
+  color: #ffa500; /* Orange accent */
+  margin-bottom: 10px;
+}
+
+.visit-country-section .section-heading {
+  font-size: 16px;
+  color: #ccc;
+  padding: 15px;
+}
+
+/* Grid layout for country cards */
+.visit-country-section .country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Individual country card */
+.visit-country-section .country-card {
+  background-color: #1a1a1a; /* dark card */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.visit-country-section .country-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.visit-country-section .country-card:hover img {
+  transform: scale(1.05);
+}
+
+.visit-country-section .country-card .country-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.visit-country-section .country-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffa500;
+}
+
+.visit-country-section .country-card p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* Button inside card */
+.visit-country-section .btn-explore {
+  display: inline-block;
+  background-color: #ffa500;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.visit-country-section .btn-explore:hover {
+  background-color: #fff;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+/* Card hover effect */
+.visit-country-section .country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.4);
+}
+
+/* Book Yours Now Section */
+.book-yours-now {
+  background-color: #1a1a1a;
+  margin-top: 50px;
+  padding: 40px 20px;
+  border-radius: 15px;
+}
+
+.book-yours-now h2 {
+  font-size: 28px;
+  color: #ffa500;
+  margin-bottom: 10px;
+}
+
+.book-yours-now h4 {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.book-yours-now .border-button a {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #ffa500;
+  border-radius: 25px;
+  color: #ffa500;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.book-yours-now .border-button a:hover {
+  background-color: #ffa500;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .visit-country-section .section-heading h2 {
+    font-size: 28px;
+  }
+  .visit-country-section .section-heading p {
+    font-size: 14px;
+  }
+  .book-yours-now h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Hide on small screens (phones/tablets) */
+@media (max-width: 768px) {
+  .next, .prev {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px){
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+header {
+  max-width: 100%;
+  overflow: visible; /* allow dropdown to expand normally */
+}
+
+}
+
+
+
+
+
+
+
+
+
+

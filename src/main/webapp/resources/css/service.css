@@ -1,0 +1,175 @@
+/* -------------------------------
+   service.css
+   Styles for: .container (main content) → before footer
+   Theme: orange / black / white
+   ------------------------------- */
+
+:root{
+  --accent: #ff6a00;      /* orange */
+  --dark:   #0b0b0b;      /* near black */
+  --muted:  #f6f6f6;      /* light bg */
+  --white:  #ffffff;
+  --card-shadow: 0 10px 30px rgba(11,11,11,0.08);
+  --card-shadow-hover: 0 18px 40px rgba(11,11,11,0.12);
+}
+
+/* Main container (separate from navbar)
+   - margin-top big enough so it doesn't overlap the navbar/slider
+   - centered content with padding
+*/
+.container {
+ overflow:auto;
+    display:flex;
+    flex-direction:column;
+    /*border:2px solid red;*/
+    margin:3% auto;
+
+      width: 90vw;
+  padding: 28px;
+  background: linear-gradient(180deg, var(--white), var(--white));
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Page title & intro */
+.container > h1 {
+  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--dark);
+  font-size: 32px;
+  margin: auto;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.container > p {
+  margin:auto;
+  color: #575757;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Grid of packages/services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+/* Card (each package/service) */
+.service {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--card-shadow);
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+/* Hover lift */
+.service:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Image in card */
+.service img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Heading and description */
+.service h3 {
+  font-size: 18px;
+  color: var(--dark);
+  margin: 0 0 8px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.service p {
+  color: #555;
+  font-size: 14px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+  flex-grow: 1; /* keep buttons at bottom */
+}
+
+/* Two buttons container (Itinerary / Book) */
+.twobuttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.twobuttons a { text-decoration: none; }
+
+.twobuttons button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Primary (Book now) */
+.twobuttons a:nth-child(2) button,
+.twobuttons button.primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* Secondary (Itinerary) */
+.twobuttons a:nth-child(1) button,
+.twobuttons button.secondary {
+  background: var(--white);
+  color: var(--accent);
+  border: 1px solid rgba(255,106,0,0.12);
+}
+
+/* Button hover states */
+.twobuttons button:hover {
+  transform: translateY(-3px);
+  opacity: 0.98;
+}
+
+/* Make sure long texts don't break layout */
+.service .meta { font-size: 13px; color: #888; margin-top: 8px; }
+
+/* Responsive tweaks */
+@media (max-width: 920px) {
+  .container { margin: 20px auto; padding: 20px; }
+  .service img { height: 150px; }
+  .container > p{margin:auto;}
+}
+
+@media (max-width: 560px) {
+  .services { gap: 16px; }
+  .service img { height: 140px; }
+  .container > h1 { font-size: 24px; }
+  .twobuttons { gap: 8px; }
+}
+
+/* Accessibility / focus styles */
+.twobuttons button:focus {
+  outline: 3px solid rgba(255,106,0,0.18);
+  outline-offset: 3px;
+}
+
+/* Ensure this block does not affect footer styles:
+   - do NOT style footer selectors here
+   - keep everything scoped to .container / .services / .service
+*/

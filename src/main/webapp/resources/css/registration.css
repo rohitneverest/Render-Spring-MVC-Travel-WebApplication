@@ -1,0 +1,99 @@
+ /* Registration Section Theme */
+        body {
+            background: linear-gradient(135deg, #fff5eb, #ffe0b2);
+        }
+
+        .register-section {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 15px;
+        }
+
+        .register-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            border-top: 8px solid #ff6600;
+            transition: 0.3s ease;
+        }
+
+        .register-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .register-container h1 {
+            text-align: center;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .register-container label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.2s;
+            margin-bottom: 18px;
+        }
+
+        .register-container input:focus {
+            border-color: #ff6600;
+            box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+        }
+
+        .register-container .btn {
+            width: 100%;
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .register-container .btn:hover {
+            background: #e65100;
+        }
+
+        .register-container p {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .register-container p a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .register-container {
+                padding: 30px 20px;
+            }
+        }

@@ -1,0 +1,37 @@
+/* Footer */
+.site-footer {
+
+
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+    text-align: center;
+
+
+    background-color: #303030; /* Dark background */
+            position:relative;
+            z-index:2;
+            top:7rem;
+
+
+
+            width:100vw;
+
+
+
+
+
+}
+
+.site-footer a {
+    color: #ffa500;
+    text-decoration: none;
+
+
+}
+
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
