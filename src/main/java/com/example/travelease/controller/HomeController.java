@@ -21,8 +21,17 @@ import java.util.Optional;
 public class HomeController {
 
 
+@GetMapping("/test")
+@ResponseBody
+public String test() {
+    return "Application is working";
+}
+    @GetMapping("/hello")
+public String hello() {
+    return "index";
+}
 
-
+    
     @RequestMapping("/")
     public String index(){
         return "index";
