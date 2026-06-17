@@ -16,4 +16,4 @@ COPY --from=build /app/target/travelease-0.0.1-SNAPSHOT.war travelease.war
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-war","travelease.war"]
+ENTRYPOINT ["java","-jar","travelease.war"]
