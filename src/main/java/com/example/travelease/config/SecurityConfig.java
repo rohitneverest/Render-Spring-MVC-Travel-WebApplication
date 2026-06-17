@@ -129,7 +129,7 @@ public class SecurityConfig{
                 .requestMatchers(
                         "/auth/**"
                 ).permitAll()
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
         );
 
 //        http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
