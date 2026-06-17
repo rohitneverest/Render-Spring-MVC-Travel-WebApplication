@@ -12,8 +12,8 @@ FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-COPY --from=build /app/target/travelease-0.0.1-SNAPSHOT.jar travelease.jar
+COPY --from=build /app/target/travelease-0.0.1-SNAPSHOT.war travelease.war
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","travelease.jar"]
+ENTRYPOINT ["java","-war","travelease.war"]

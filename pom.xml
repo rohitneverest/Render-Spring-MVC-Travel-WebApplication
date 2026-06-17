@@ -12,6 +12,7 @@
 	<artifactId>travelease</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>travelease</name>
+	<packaging>war</packaging>
 	<description>Project for Spring Boot</description>
 	<url/>
 	<licenses>
