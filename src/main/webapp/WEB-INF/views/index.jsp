@@ -195,7 +195,7 @@
            slide.insertBefore(items[items.length - 1], items[0]);
          });
 
-         // ✅ Swipe logic for mobile
+         //  Swipe logic for mobile
          let startX = 0;
          let endX = 0;
 

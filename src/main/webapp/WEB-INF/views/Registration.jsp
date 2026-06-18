@@ -72,7 +72,7 @@
                        <input type="password" id="Rpassword" name="Rpassword" placeholder="Enter your password" required>
 
                        <input class="btn" type="submit" value="Create Account">
-                       <p>Already have an account? <a href="login">Login here</a></p>
+                       <p>Already have an account? <a href="/">Login here</a></p>
                    </form>
                </div>
            </section>

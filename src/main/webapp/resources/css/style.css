@@ -378,6 +378,11 @@ header {
 }
 
 
+iframe[src*="botpress"] {
+    z-index: 999999 !important;
+}
+
+
 
 
 

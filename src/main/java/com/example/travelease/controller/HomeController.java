@@ -110,10 +110,7 @@ public class HomeController {
     public String review(){
         return "Navbar/review";
     }
-    @RequestMapping("login")
-    public String login(){
-        return "login";
-    }
+
 
 
 // validation
