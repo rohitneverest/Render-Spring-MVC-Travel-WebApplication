@@ -87,8 +87,9 @@
 
 <section class="top-slider-pictures-section">
 
-  //chatbot
+  <!-- Chatbot -->
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+
     <script src="https://files.bpcontent.cloud/2025/04/16/17/20250416172314-8EBMJPGE.js" defer></script>
 
 
