@@ -22,7 +22,7 @@ public class HomeController {
 
 
 
-    
+
     @RequestMapping("/")
     public String index(){
         return "index";
@@ -135,11 +135,7 @@ public class HomeController {
 
 
 
-    @GetMapping("/registration")
-    public String registration(){
-        System.out.println("im here............");
-        return "Registration";
-    }
+
 
     @GetMapping("new")
     public String mew(){

@@ -4,6 +4,7 @@ import com.example.travelease.DTO.LoginResponseDTO;
 import com.example.travelease.Repo.UsersRepo;
 import com.example.travelease.model.Users;
 import com.example.travelease.service.AuthService;
+import com.example.travelease.service.EmailService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,10 +37,28 @@ public class AuthController {
     @Autowired
     UsersRepo usersRepo;
 
+    @Autowired
+    EmailService emailService;
     //FORM
 
     @Autowired
     private PasswordEncoder encoder;
+
+
+
+    @GetMapping("/registration")
+    public String registration(HttpSession session){
+
+        Boolean loggedIn =
+                (Boolean) session.getAttribute("loggedIn");
+
+        if(loggedIn == null || !loggedIn){
+            return "Registration";
+
+        }
+        return "redirect:/";
+    }
+
 
     @PostMapping("/register")
     public String registration(String Rname, String Remail, String Rpassword, Model model){
@@ -78,7 +98,15 @@ public class AuthController {
     private AuthService authService;
 
 
+    @GetMapping("signin")
+    public String login(Model model) {
 
+
+        model.addAttribute("showLogin", true);
+
+        return "index";
+
+    }
 
 
     @PostMapping("signin")
@@ -259,5 +287,66 @@ public class AuthController {
         return "Auth/changePassword";
     }
 
+
+
+    @GetMapping("forgot-password")
+    public String forgotPassword(){
+
+        return "Auth/forgotPassword";
+    }
+
+
+
+
+
+    @PostMapping("/getOTP")
+    public String forgotPassword(@RequestParam String email,
+                                 HttpSession session,
+                                 Model model) {
+
+        Optional<Users> user = usersRepo.findByUsername(email);
+
+        if (user.isPresent()) {
+
+            Users u = user.get();
+
+            // generate OTP
+            SecureRandom random = new SecureRandom();
+            int otp = 100000 + random.nextInt(900000);
+
+            // send email
+            emailService.sendOtpEmail(email, otp);
+
+            // STORE IN SESSION (IMPORTANT FIX)
+            session.setAttribute("otp", otp);
+            session.setAttribute("email", email);
+
+
+
+            return "Auth/enterOtp";
+        }
+
+        model.addAttribute("error", "Email not registered");
+        return "auth/forgotPassword";
+    }
+
+
+
+    @PostMapping("/validateOTP")
+    public String validateOTP(@RequestParam String otp,
+                              HttpSession session,
+                              Model model) {
+
+        // get stored OTP
+        Integer savedOtp = (Integer) session.getAttribute("otp");
+
+        if (savedOtp != null && otp.equals(String.valueOf(savedOtp))) {
+
+            return "Auth/newPassword";
+        }
+
+        model.addAttribute("error", "Invalid OTP");
+        return "Auth/enterOtp";
+    }
 
 }
