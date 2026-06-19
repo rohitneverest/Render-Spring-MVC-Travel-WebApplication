@@ -306,11 +306,27 @@ public class AuthController {
             int otp = 100000 + random.nextInt(900000);
 
             // send email
-            emailService.sendOtpEmail(email, otp);
+            try {
 
-            // STORE IN SESSION (IMPORTANT FIX)
-            session.setAttribute("otp", otp);
-            session.setAttribute("email", email);
+                emailService.sendOtpEmail(email, otp);
+
+                // STORE IN SESSION (IMPORTANT FIX)
+                session.setAttribute("otp", otp);
+                session.setAttribute("email", email);
+
+            } catch (Exception e) {
+
+                e.printStackTrace();
+
+                model.addAttribute(
+                        "error",
+                        "Unable to send OTP email. Please try again later."
+                );
+
+                return "Auth/forgotPassword";
+            }
+
+
 
 
 
