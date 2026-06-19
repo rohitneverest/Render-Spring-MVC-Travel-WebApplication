@@ -63,16 +63,7 @@ public class AuthController {
     @PostMapping("/register")
     public String registration(String Rname, String Remail, String Rpassword, Model model){
 
-//repo.findall()
-//  repo.findById(id)
-// Optional<Users> u=usersRepo.findById(3)
-//  syso(u)
-//        or
-//syso(u.orElse(new Student() )
 
-// repo.save(obj)7
-//repo.delete(obj)
-//repo.deleteById(5)
 
 
 
@@ -327,7 +318,7 @@ public class AuthController {
         }
 
         model.addAttribute("error", "Email not registered");
-        return "auth/forgotPassword";
+        return "auth/forgot-Password";
     }
 
 
