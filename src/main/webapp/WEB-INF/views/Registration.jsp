@@ -1,4 +1,5 @@
-<%@page language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 <html lang="en">
@@ -6,54 +7,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tourism and Traveling Management</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 
-           <link rel="stylesheet" href="/resources/css/navbar.css">
-           <link rel="stylesheet" href="/resources/css/registration.css">
-           <link rel="stylesheet" href="/resources/css/footer.css">
+    <link rel="stylesheet" href="/resources/css/navbar.css">
+    <link rel="stylesheet" href="/resources/css/registration.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
+
+
+
+
 
 </head>
 
 <body>
 
-
 <section class="navbar-section">
-    <header>
-        <div id="menu-bar" class="fas fa-bars"></div>
-        <a href="#" class="logo"><span>T</span>ravel<span>E</span>ase</a>
-        <nav class="navbar">
-            <a href="/">home</a>
-            <a href="book">book</a>
-            <a href="packages">packages</a>
-            <a href="service">service</a>
-            <a href="gallery">gallery</a>
-            <a href="review">review</a>
-            <a href="contact">contact</a>
-        </nav>
+     <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="/" class="logo"><span>T</span>ravel<span>E</span>ase</a>
+            <nav class="navbar">
+                <a href="/"><b>home</b></a>
 
-    </header>
 
-    <div class="login-form-container">
-        <i class="fas fa-times" id="form-close"></i>
-        <form action="">
-            <h3>login</h3>
-            <input type="email" class="box" placeholder="enter your email">
-            <input type="password" class="box" placeholder="enter your password ">
-            <input type="submit" value="login now" class="btn" onclick="window.location.href='loggin.html';">
-            <!-- <a href="#" class="btn">login now</a> -->
-        <div class="check">
-               <input type="checkbox" id="remember">
-                <label for="remember">Remember me!</label>
-          </div>
-            <p>forget password? <a href="#">click here</a></p>
+            </nav>
+            <script src="/resources/js/script.js"></script>
 
-        </form>
-    </div>
-    <script src="/resources/js/script.js"></script>
 </section>
+
 
 
 
@@ -72,7 +54,7 @@
                        <input type="password" id="Rpassword" name="Rpassword" placeholder="Enter your password" required>
 
                        <input class="btn" type="submit" value="Create Account">
-                       <p>Already have an account? <a href="/">Login here</a></p>
+                       <p>Already have an account? <a href="/auth/signin">Login here</a></p>
                    </form>
                </div>
            </section>
