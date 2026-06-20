@@ -42,6 +42,37 @@ formClose.addEventListener('click', () => {
 
 
 
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+function toggleBackToTop() {
+    const scrollPosition =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+
+    if (scrollPosition > 100) {   // reduced from 200 to 100
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+window.addEventListener("scroll", toggleBackToTop);
+window.addEventListener("resize", toggleBackToTop);
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+
+
+
+
 
 
 

@@ -81,7 +81,7 @@
             <p>don't have an account? <a href="/registration">register now</a></p>
         </form>
     </div>
-     <script src="/resources/js/script.js"></script>
+
 </section>
 
 
@@ -108,17 +108,75 @@
 
     <!-- Footer -->
    <footer class="site-footer">
-                <div class="container-footer">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <p>Copyright © 2024 <a href="#">TravelEase</a> Company. All rights reserved.
-                                <br>Design: <a href="#for later use" target="_blank" title="free CSS templates">Eleugwangbe Kenrang</a>
-                                <br>Re-Designed and Optimized: <a href="#for later use" target="_blank" title="free CSS templates">Rohit Sharma</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+
+       <div class="footer-container">
+
+           <div class="footer-column">
+               <h3>TravelEase</h3>
+               <p>
+                   Your trusted travel companion for discovering destinations,
+                   planning trips and creating unforgettable memories.
+               </p>
+           </div>
+
+           <div class="footer-column" id="quicklinks">
+               <h3 >Quick Links</h3>
+
+               <a href="/">Home</a>
+               <a href="/packages">Packages</a>
+               <a href="/gallery">Gallery</a>
+               <a href="/contact">Contact</a>
+           </div>
+
+           <div class="footer-column">
+               <h3>Contact</h3>
+
+               <p><i class="fas fa-envelope"></i> travelease353@gmail.com</p>
+               <p><i class="fas fa-map-marker-alt"></i> Shillong, Meghalaya</p>
+           </div>
+
+       </div>
+
+       <div class="social-icons">
+
+           <a href="https://www.linkedin.com/in/rohit200byte/" target="_blank">
+               <i class="fab fa-linkedin-in"></i>
+           </a>
+
+           <a href="/" target="_blank">
+               <i class="fab fa-instagram"></i>
+           </a>
+
+           <a href="/" target="_blank">
+               <i class="fab fa-youtube"></i>
+           </a>
+
+       </div>
+
+       <div class="footer-bottom">
+
+           <p>
+               © 2024 TravelEase. All Rights Reserved.
+           </p>
+
+           <p>
+               <a href="/">Privacy Policy</a> |
+               <a href="/">Terms & Conditions</a>
+           </p>
+
+
+       </div>
+
+   </footer>
+
+   <button id="backToTopBtn" title="Back To Top" >
+       <i class="fas fa-arrow-up"></i>
+   </button>
+
+
+
+
+   <script src="/resources/js/script.js"></script>
 
 </body>
 </html>
