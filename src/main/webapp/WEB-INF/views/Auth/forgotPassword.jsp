@@ -77,6 +77,11 @@ body {
 						next page</li>
 					</ol>
 				</div>
+				<c:if test="${not empty error}">
+                    <div class="alert alert-danger mt-3">
+                        ${error}
+                    </div>
+                </c:if>
 				<form class="card mt-4" action="/auth/getOTP" method="POST">
 					<div class="card-body">
 						<div class="form-group">
