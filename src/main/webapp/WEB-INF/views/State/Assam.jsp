@@ -93,22 +93,22 @@
     <h2>Less Explored Places in Assam</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kaziranga_National_Park.jpg" alt="Kaziranga National Park">
+            <img src="https://media.istockphoto.com/id/538374335/photo/one-horned-rhinoceros.jpg?s=612x612&w=0&k=20&c=ze4cJvIp31KWS78Wo32040hwTEADwqvs9WxGG2-jaAc=" alt="Kaziranga National Park">
             <h3>Kaziranga National Park</h3>
             <p>Home to the one-horned rhinoceros and a UNESCO World Heritage Site.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Majuli_island.jpg" alt="Majuli Island">
+            <img src="https://t3.ftcdn.net/jpg/03/37/69/16/360_F_337691600_zcNh8S36rIv9c81w04i4pfCXdkgfoPze.jpg" alt="Majuli Island">
             <h3>Majuli Island</h3>
             <p>The world's largest river island, known for its monasteries and scenic beauty.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sivasagar_Sibsagar_tank.jpg" alt="Sivasagar">
+            <img src="https://thumbs.dreamstime.com/b/located-bank-sivasagar-lake-shiva-dol-another-attraction-city-which-dates-back-to-time-was-capital-322166062.jpg" alt="Sivasagar">
             <h3>Sivasagar</h3>
             <p>An ancient Ahom kingdom with historic temples and monuments.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Haflong_Lake.jpg" alt="Haflong">
+            <img src="https://t3.ftcdn.net/jpg/15/74/92/24/360_F_1574922476_xFxSdL9Zlz7SJEaEI67RzuKv8SDXT2iH.jpg" alt="Haflong">
             <h3>Haflong</h3>
             <p>The only hill station in Assam, offering breathtaking landscapes and a peaceful retreat.</p>
         </div>

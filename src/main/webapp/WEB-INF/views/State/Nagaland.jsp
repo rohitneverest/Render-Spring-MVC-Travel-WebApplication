@@ -95,7 +95,7 @@
                 <p>One of the most scenic trekking destinations in Nagaland, known for its rolling hills and vibrant seasonal flowers.</p>
             </div>
             <div class="place">
-                <img src="https://www.tripnomadic.com/wp-content/uploads/2022/12/Khonoma-Green-Village.jpg" alt="Khonoma Green Village">
+                <img src="https://footloosedev.com/wp-content/uploads/2017/12/khonoma-kohima.jpg" alt="Khonoma Green Village">
                 <h3>Khonoma Green Village</h3>
                 <p>India’s first green village, offering breathtaking views and an opportunity to learn about sustainable Naga lifestyles.</p>
             </div>

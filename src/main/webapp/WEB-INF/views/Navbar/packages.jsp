@@ -147,7 +147,7 @@
             </div>
         </div>
         <div class="package">
-            <img src="https://www.adotrip.com/public/images/festivals/5c3eb4bbd2e20-Hornbill%20Festival%20Places%20to%20See.jpg" alt="Hornbill Festival">
+            <img src="https://thumbs.dreamstime.com/b/hornbill-festival-nagaland-india-9974248.jpg" alt="Hornbill Festival">
             <h3>Hornbill Festival - 3 Days</h3>
             <p>Experience the vibrant Hornbill Festival, showcasing the traditions and culture of Naga tribes.</p>
 
@@ -252,7 +252,7 @@
             </div>
         </div>
         <div class="package">
-            <img src="https://www.adotrip.com/public/images/areas/master_images/5fbcf26e83bc2-Kamakhya_Temple_Attractions.jpg" alt="Kamakhya Temple">
+            <img src="https://res.cloudinary.com/kmadmin/image/upload/v1724234472/kiomoi/Kamakhya_Temple_7389.jpg" alt="Kamakhya Temple">
             <h3>Guwahati & Kamakhya Temple - 2 Days</h3>
             <p>Visit the sacred Kamakhya Temple and cruise on the Brahmaputra River.</p>
 
@@ -383,7 +383,7 @@
             </div>
         </div>
         <div class="package">
-            <img src="https://www.elginhotels.com/wp-content/uploads/2020/03/rumtek-monastery-01.jpg" alt="Rumtek Monastery">
+            <img src="https://thumbs.dreamstime.com/b/line-tibetan-monks-front-rumtek-monastery-welcoming-high-level-monk-near-gangtok-sikkim-india-97546058.jpg" alt="Rumtek Monastery">
             <h3>Gangtok & Rumtek Monastery - 3 Days</h3>
             <p>Explore the vibrant capital city, visit the famous Rumtek Monastery, and enjoy local cuisine.</p>
 
@@ -403,7 +403,7 @@
             </div>
         </div>
         <div class="package">
-            <img src="https://www.adotrip.com/public/images/areas/master_images/5e3d0dba837d9-Lachung_Lachen_and_Yumthang_Valley_Attractions.jpg" alt="Lachung Valley">
+            <img src="https://nomadicweekends.com/blog/wp-content/uploads/2019/02/1510389758_Beautiful_enchanting_Sikkim.jpg-1024x496.jpg" alt="Lachung Valley">
             <h3>Lachung & Yumthang Valley - 3 Days</h3>
             <p>Visit the picturesque Yumthang Valley, also known as the 'Valley of Flowers,' and explore Lachung.</p>
 
@@ -420,7 +420,7 @@
 
     <div class="packages">
         <div class="package">
-            <img src="https://www.connectingtraveller.com/images/localtip/1660603987images%20(28).jpeg" alt="Ujjayanta Palace">
+            <img src="https://thumbs.dreamstime.com/b/maharaja-radha-kishore-manikya-debbarma-built-ujjayanta-palace-also-known-as-palace-kingdom-tripura-319790085.jpg" alt="Ujjayanta Palace">
             <h3>Agartala & Ujjayanta Palace - 2 Days</h3>
             <p>Visit the royal Ujjayanta Palace and explore the cultural richness of Agartala.</p>
 

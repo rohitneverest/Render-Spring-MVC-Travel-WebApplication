@@ -93,22 +93,22 @@
     <h2>Less Explored Places in Tripura</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Unakoti_rock_carvings.jpg" alt="Unakoti">
+            <img src="https://media.gettyimages.com/id/2213791130/photo/visitors-walk-past-a-massive-rock-cut-relief-at-the-ancient-site-of-unakoti-near-agartala.jpg?s=612x612&w=0&k=20&c=ycNe1qfea-PlyIUg5ACX4bnrWYLnMZaIqEy5hPUniJE=" alt="Unakoti">
             <h3>Unakoti</h3>
             <p>Ancient rock carvings and sculptures believed to be over 1,000 years old.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Neermahal_Palace.jpg" alt="Neermahal">
+            <img src="https://cdn.pixabay.com/photo/2021/08/14/17/35/castle-6545837_640.jpg" alt="Neermahal">
             <h3>Neermahal</h3>
             <p>A magnificent water palace located in the middle of Rudrasagar Lake.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Jampui_Hills_Tripura.jpg" alt="Jampui Hills">
+            <img src="https://tripuratourism.gov.in/images/galleries/1663749265147/2.jpg">
             <h3>Jampui Hills</h3>
             <p>Famous for its lush landscapes, orange orchards, and breathtaking views.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Trishna_Wildlife_Sanctuary.jpg" alt="Trishna Wildlife Sanctuary">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtCAmDl-gntaHBczQgeXdwYZBxS7nuf8RYnw&s" alt="Trishna Wildlife Sanctuary">
             <h3>Trishna Wildlife Sanctuary</h3>
             <p>Home to the rare Indian bison and a variety of exotic birds and animals.</p>
         </div>

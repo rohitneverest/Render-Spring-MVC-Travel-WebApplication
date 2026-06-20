@@ -92,22 +92,22 @@
     <h2>Less Explored Places in Arunachal Pradesh</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Tawang_monastery.jpg" alt="Tawang Monastery">
+            <img src="https://t3.ftcdn.net/jpg/12/24/86/50/360_F_1224865014_AuYULhTjW0QyYumhm3SO0ZvwI50o88cM.jpg" alt="Tawang Monastery">
             <h3>Tawang Monastery</h3>
             <p>One of the largest Buddhist monasteries in India, offering breathtaking views of the Himalayas.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Ziro_Valley.jpg" alt="Ziro Valley">
+            <img src="https://www.thesevensister.com/blog/wp-content/uploads/2017/03/lush-green-hills.jpg" alt="Ziro Valley">
             <h3>Ziro Valley</h3>
             <p>A UNESCO World Heritage site, known for its scenic landscapes and the Apatani tribal culture.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Sela_Pass_Arunachal_Pradesh.jpg" alt="Sela Pass">
+            <img src="https://thumbs.dreamstime.com/b/sela-pass-ft-arunachal-pradesh-india-348620552.jpg" alt="Sela Pass">
             <h3>Sela Pass</h3>
             <p>A high-altitude mountain pass with stunning lakes and snowfall throughout the year.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Bomdila.jpg" alt="Bomdila">
+            <img src="https://www.incredible-northeastindia.com/images/ap-head.jpg" alt="Bomdila">
             <h3>Bomdila</h3>
             <p>A quiet hill town known for its Buddhist monasteries and panoramic views of the Himalayas.</p>
         </div>

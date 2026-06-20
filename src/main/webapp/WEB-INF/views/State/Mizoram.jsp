@@ -92,22 +92,22 @@
     <h2>Less Explored Places in Mizoram</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Reiek_Tlang%2C_Mizoram.jpg" alt="Reiek Tlang">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/reiek-tlang-mountain-aizawl-mizoram-blog-ntr-exp-cit-pop?qlt=82&ts=1726674782400" alt="Reiek Tlang">
             <h3>Reiek Tlang</h3>
             <p>A picturesque hill offering breathtaking views of the Mizoram countryside.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Vantawng_Falls_Mizoram.jpg" alt="Vantawng Falls">
+            <img src="https://aravindgundumane.com/wp-content/uploads/2022/10/Vantawng-falls-highest-waterfall-in-Mizoram.jpg" alt="Vantawng Falls">
             <h3>Vantawng Falls</h3>
             <p>The highest waterfall in Mizoram, surrounded by lush green forests.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Dampa_Tiger_Reserve.jpg" alt="Dampa Tiger Reserve">
+            <img src="https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2023/12/Tiger-territory.jpg?size=*:900" alt="Dampa Tiger Reserve">
             <h3>Dampa Tiger Reserve</h3>
             <p>A wildlife sanctuary home to tigers, elephants, and rare bird species.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Tamdil_Lake%2C_Mizoram.jpg" alt="Tamdil Lake">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zQNaA2Vg6XnmuXLbCl0Qw_KyiCKYZB00nA&s" alt="Tamdil Lake">
             <h3>Tamdil Lake</h3>
             <p>A serene lake surrounded by dense forests, ideal for boating and picnics.</p>
         </div>

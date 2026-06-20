@@ -90,22 +90,22 @@
     <h2>Less Explored Places in Sikkim</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Yumthang_Valley_in_North_Sikkim.jpg" alt="Yumthang Valley">
+            <img src="https://media.istockphoto.com/id/508515429/photo/thangu-valley.jpg?s=612x612&w=0&k=20&c=w5Yt9Wvezb3_84V8kOXHCkNddKo98Y29LgwrdP4ewx4=" alt="Yumthang Valley">
             <h3>Yumthang Valley</h3>
             <p>Known as the "Valley of Flowers," it offers breathtaking views and colorful blooms.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Tsomgo_Lake_Sikkim.jpg" alt="Tsomgo Lake">
+            <img src="https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=" alt="Tsomgo Lake">
             <h3>Tsomgo Lake</h3>
             <p>A high-altitude glacial lake, known for its changing colors with the seasons.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Gurudongmar_Lake%2C_Sikkim.jpg" alt="Gurudongmar Lake">
+            <img src="https://media.istockphoto.com/id/1044788408/photo/gurudongmar-lake-highest-glacial-lake-of-india-in-sikkim.jpg?s=612x612&w=0&k=20&c=djh7XDJxq9o93focvM4iAuMpIbvEFgg_4iAFeVUeMc0=" alt="Gurudongmar Lake">
             <h3>Gurudongmar Lake</h3>
             <p>One of the highest lakes in the world, offering stunning views of the Himalayas.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Sikkim_Ravangla_Buddha_Park.jpg" alt="Ravangla">
+            <img src="https://t3.ftcdn.net/jpg/03/89/21/92/360_F_389219282_VllcqD0G5H5HYa6raD9WMpUur0fyrPBD.jpg" alt="Ravangla">
             <h3>Ravangla</h3>
             <p>A peaceful town with stunning Buddha Park and panoramic mountain views.</p>
         </div>

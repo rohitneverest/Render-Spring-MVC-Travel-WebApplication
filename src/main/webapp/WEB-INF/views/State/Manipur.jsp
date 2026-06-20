@@ -91,22 +91,22 @@
     <h2>Less Explored Places in Manipur</h2>
     <div class="places">
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Loktak_Lake.JPG" alt="Loktak Lake">
+            <img src="https://images.pond5.com/timelapse-clouds-above-loktak-lake-footage-129374013_iconl.jpeg" alt="Loktak Lake">
             <h3>Loktak Lake</h3>
             <p>The largest freshwater lake in Northeast India, famous for its floating phumdis (islands).</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Dzuko_Valley.jpg" alt="Dzukou Valley">
+            <img src="https://wanderon-images.gumlet.io/gallery/new/2026/04/20/1776671241083-dzukou-valley-trek.jpg?auto=compress%2Cformat&w=768" alt="Dzukou Valley">
             <h3>Dzukou Valley</h3>
             <p>A hidden paradise with rolling hills, vibrant flowers, and breathtaking views.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Kangla_Fort%2C_Manipur.jpg" alt="Kangla Fort">
+            <img src="https://media.istockphoto.com/id/1173721130/photo/govindaji-kangla-fort-imphal-manipur.jpg?s=612x612&w=0&k=20&c=t4TDNf6L4PVEDCY4fWLm6-vZoZJ3PNFheRGmnNoq9UM=" alt="Kangla Fort">
             <h3>Kangla Fort</h3>
             <p>A historic fort symbolizing Manipur’s rich history and cultural significance.</p>
         </div>
         <div class="place">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/INA_Museum_Manipur.jpg" alt="INA War Museum">
+            <img src="https://tripxl.com/blog/wp-content/uploads/2024/08/INA-Hall.jpg" alt="INA War Museum">
             <h3>INA War Museum</h3>
             <p>A museum dedicated to Netaji Subhas Chandra Bose and the Indian National Army’s contribution to India’s freedom struggle.</p>
         </div>
