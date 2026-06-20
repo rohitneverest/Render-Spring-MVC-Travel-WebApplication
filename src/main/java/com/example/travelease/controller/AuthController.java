@@ -319,8 +319,7 @@ public class AuthController {
                 e.printStackTrace();
 
                 model.addAttribute(
-                        "error",
-                        "Unable to send OTP email. Please try again later."
+                        "error", "Unable to send OTP email. Please try again later."
                 );
 
                 return "Auth/forgotPassword";

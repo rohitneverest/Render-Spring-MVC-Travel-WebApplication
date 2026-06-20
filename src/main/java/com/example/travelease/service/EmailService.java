@@ -14,9 +14,16 @@ public class EmailService {
     public void sendOtpEmail(String toEmail, int otp) {
 
         SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setFrom("travelease353@gmail.com");
         message.setTo(toEmail);
+
         message.setSubject("Your OTP Code");
-        message.setText("Your OTP is: " + otp + "\nThis OTP is valid for 5 minutes.");
+
+        message.setText(
+                "Your OTP is: " + otp +
+                        "\nThis OTP is valid for 5 minutes."
+        );
 
         mailSender.send(message);
     }
