@@ -233,7 +233,7 @@
                 <div class="country-info">
                     <h3>Nagaland</h3>
                     <p>Diverse tribal communities and vibrant festivals, like the Hornbill Festival.</p>
-                    <a href="nagaland" class="btn-explore">Explore</a>
+                    <a href="/nagaland" class="btn-explore">Explore</a>
                 </div>
             </div>
             <!-- Card 2 -->
@@ -242,7 +242,7 @@
                 <div class="country-info">
                     <h3>Arunachal Pradesh</h3>
                     <p>The Land of the Rising Sun, breathtaking landscapes and culture.</p>
-                    <a href="arunachal" class="btn-explore">Explore</a>
+                    <a href="/arunachal" class="btn-explore">Explore</a>
                 </div>
             </div>
             <!-- Card 3 -->
@@ -251,7 +251,7 @@
                 <div class="country-info">
                     <h3>Assam</h3>
                     <p>Land of tea, temples, and the mighty Brahmaputra River.</p>
-                    <a href="assam" class="btn-explore">Explore</a>
+                    <a href="/assam" class="btn-explore">Explore</a>
                 </div>
             </div>
             <!-- Card 4 -->
@@ -260,7 +260,7 @@
                 <div class="country-info">
                     <h3>Meghalaya</h3>
                     <p>Abode of clouds, waterfalls, and lush green hills.</p>
-                    <a href="meghalaya" class="btn-explore">Explore</a>
+                    <a href="/meghalaya" class="btn-explore">Explore</a>
                 </div>
             </div>
         </div>
@@ -273,7 +273,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="border-button">
-                        <a href="book">Book Yours Now</a>
+                        <a href="/book">Book Yours Now</a>
                     </div>
                 </div>
             </div>
