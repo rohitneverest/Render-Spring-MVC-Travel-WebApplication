@@ -76,7 +76,7 @@
             <div class="check">
             <input type="checkbox" id="remember">
             <label for="remember">Remember me!</label></div>
-            <p>forget password? <a href="/auth/forgot-password">click here</a></p>
+            <p>forgot password? <a href="/auth/forgot-password">click here</a></p>
             <p>don't have an account? <a href="/auth/registration">register now</a></p>
         </form>
     </div>
@@ -103,7 +103,7 @@
                     <div class="name">ARUNACHAL PRADESH</div>
                     <div class="des">Arunachal Pradesh, also known as the "Land of the Dawn-Lit Mountains," is the first
                         Indian state to see sunrise due to its easternmost location.</div>
-                    <a href="arunachal"> <button>See More</button></a>
+                    <a href="/arunachal"> <button>See More</button></a>
                  </div>
             </div>
             <div class="item"
@@ -113,7 +113,7 @@
                     <div class="des">Nagaland is known for its vibrant tribal culture and festivals, especially the Hornbill
                         Festival, often called the "Festival of Festivals."
                     </div>
-                    <a href="nagaland">
+                    <a href="/nagaland">
                         <button>See More</button>
                     </a>
                 </div>
@@ -124,7 +124,7 @@
                     <div class="name">MEGHALAYA</div>
                     <div class="des">Abode of Clouds," Meghalaya has some of the highest rainfall in the world, especially in
                         Mawsynram and Cherrapunji.</div>
-                   <a href="meghalaya"><button>See More</button></a>
+                   <a href="/meghalaya"><button>See More</button></a>
                 </div>
             </div>
             <div class="item"
@@ -133,7 +133,7 @@
                     <div class="name">TRIPURA</div>
                     <div class="des">Tripura is known for its palaces, such as the Ujjayanta Palace, and rich cultural
                         heritage.</div>
-                    <a href="tripura"> <button>See More</button></a>
+                    <a href="/tripura"> <button>See More</button></a>
                 </div>
             </div>
             <div class="item"
@@ -143,7 +143,7 @@
                     <div class="des">Assam is known for its tea plantations, producing some of the world’s finest teas. The
                         state is also famous for the Brahmaputra River, which provides water to the fertile plains and sustains
                         rice and jute agriculture.</div>
-                    <a href="assam"> <button>See More</button></a>
+                    <a href="/assam"> <button>See More</button></a>
                 </div>
             </div>
             <div class="item"
@@ -152,7 +152,7 @@
                     <div class="name">MIZORAM</div>
                     <div class="des">Mizoram, known as the "Land of the Blue Mountains," is covered by a beautiful expanse of
                         dense bamboo forests and blue hills.</div>
-                    <a href="mizoram"> <button>See More</button></a>
+                    <a href="/mizoram"> <button>See More</button></a>
                 </div>
             </div>
             <div class="item"
@@ -161,7 +161,7 @@
                     <div class="name">SIKKIM</div>
                     <div class="des">Sikkim is renowned for its stunning Himalayan landscapes, including Mount Kanchenjunga,
                         the third-highest peak in the world.</div>
-                    <a href="sikkim"> <button>See More</button></a>
+                    <a href="/sikkim"> <button>See More</button></a>
                 </div>
             </div>
             <div class="item"
@@ -170,7 +170,7 @@
                     <div class="name">MANIPUR</div>
                     <div class="des">Manipur is often called the "Jewel of India" for its scenic landscapes and cultural
                         richness.</div>
-                    <a href="manipur"> <button>See More</button></a>
+                    <a href="/manipur"> <button>See More</button></a>
                 </div>
             </div>
              <div class="button">

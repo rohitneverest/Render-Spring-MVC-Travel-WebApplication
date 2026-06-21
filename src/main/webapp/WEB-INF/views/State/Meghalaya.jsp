@@ -63,24 +63,24 @@
            </form>
      </header>
 
-    <div class="login-form-container ${showLogin ? 'active' : ''}">
-        <i class="fas fa-times" id="form-close"></i>
-        <form action="/auth/signin" method="POST">
-           <c:if test="${not empty loginError}">
-            <p class="error">${loginError}</p>
-           </c:if>
-            <h3>login</h3>
-            <input name="email" type="email" class="box" placeholder="enter your email">
-            <input name="password" type="password" class="box" placeholder="enter your password ">
-            <input type="submit" value="login now" class="btn" >
-            <!-- <a href="/" class="btn">login now</a> -->
-            <div class="check">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember me!</label></div>
-            <p>forget password? <a href="/">click here</a></p>
-            <p>don't have an account? <a href="/registration">register now</a></p>
-        </form>
-    </div>
+     <div class="login-form-container ${showLogin ? 'active' : ''}">
+         <i class="fas fa-times" id="form-close"></i>
+         <form action="/auth/signin" method="POST">
+            <c:if test="${not empty loginError}">
+             <p class="error">${loginError}</p>
+            </c:if>
+             <h3>login</h3>
+             <input name="email" type="email" class="box" placeholder="enter your email">
+             <input name="password" type="password" class="box" placeholder="enter your password ">
+             <input type="submit" value="login now" class="btn" >
+             <!-- <a href="/" class="btn">login now</a> -->
+             <div class="check">
+             <input type="checkbox" id="remember">
+             <label for="remember">Remember me!</label></div>
+             <p>forgot password? <a href="/auth/forgot-password">click here</a></p>
+             <p>don't have an account? <a href="/auth/registration">register now</a></p>
+         </form>
+     </div>
 
 </section>
 <!-- Main Content -->

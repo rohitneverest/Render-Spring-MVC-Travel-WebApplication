@@ -76,8 +76,8 @@
             <div class="check">
             <input type="checkbox" id="remember">
             <label for="remember">Remember me!</label></div>
-            <p>forget password? <a href="/">click here</a></p>
-            <p>don't have an account? <a href="/registration">register now</a></p>
+            <p>forgot password? <a href="/auth/forgot-password">click here</a></p>
+            <p>don't have an account? <a href="/auth/registration">register now</a></p>
         </form>
     </div>
 
