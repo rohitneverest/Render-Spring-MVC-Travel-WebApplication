@@ -1,175 +1,139 @@
-/* -------------------------------
-   service.css
-   Styles for: .container (main content) → before footer
-   Theme: orange / black / white
-   ------------------------------- */
-
 :root{
-  --accent: #ff6a00;      /* orange */
-  --dark:   #0b0b0b;      /* near black */
-  --muted:  #f6f6f6;      /* light bg */
-  --white:  #ffffff;
-  --card-shadow: 0 10px 30px rgba(11,11,11,0.08);
-  --card-shadow-hover: 0 18px 40px rgba(11,11,11,0.12);
+    --black:#0b0b0b;
+    --dark:#181818;
+    --orange:#ff8c00;
+    --green:#2ecc71;
+    --white:#ffffff;
+    --gray:#cccccc;
 }
 
-/* Main container (separate from navbar)
-   - margin-top big enough so it doesn't overlap the navbar/slider
-   - centered content with padding
-*/
-.container {
- overflow:auto;
-    display:flex;
-    flex-direction:column;
-    /*border:2px solid red;*/
-    margin:3% auto;
-
-      width: 90vw;
-  padding: 28px;
-  background: linear-gradient(180deg, var(--white), var(--white));
-  box-sizing: border-box;
-  border-radius: 10px;
+body{
+    background: var(--black);
+    color: var(--white);
 }
 
-/* Page title & intro */
-.container > h1 {
-  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--dark);
-  font-size: 32px;
-  margin: auto;
-  font-weight: 700;
-  letter-spacing: -0.2px;
+/* MAIN CONTAINER */
+
+.container{
+    width: 85%;
+    margin: 4rem auto;
+    background: #151515;
+    padding-top:2rem;
+    padding-bottom:4rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    border-top:4px solid orange;
+    border-radius: 25px;
 }
 
-.container > p {
-  margin:auto;
-  color: #575757;
-  line-height: 1.6;
-  font-size: 15px;
+.container h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--orange);
+    margin-bottom: 1rem;
 }
 
-/* Grid of packages/services */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-  align-items: start;
+.container > p{
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--white);
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 5rem;
+    line-height: 1.8;
 }
 
-/* Card (each package/service) */
-.service {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: var(--card-shadow);
-  transition: transform .18s ease, box-shadow .18s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.02);
+/* SERVICES */
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
 }
 
-/* Hover lift */
-.service:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
+/* SERVICE BLOCK */
+
+.service{
+    width: 85%;
+
+    text-align: center;
+
+    background: #151515;
+
+    padding: 2.5rem 3rem;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* Image in card */
-.service img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 12px;
+/* HEADING */
+
+.service h3{
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-/* Heading and description */
-.service h3 {
-  font-size: 18px;
-  color: var(--dark);
-  margin: 0 0 8px;
-  line-height: 1.2;
-  font-weight: 700;
+/* DESCRIPTION */
+
+.service p{
+    font-size: 1.15rem;
+    color: #dddddd;
+    line-height: 1.9;
+    max-width: 700px;
+    margin: auto;
 }
 
-.service p {
-  color: #555;
-  font-size: 14px;
-  margin: 0 0 12px;
-  line-height: 1.5;
-  flex-grow: 1; /* keep buttons at bottom */
+/* HOVER */
+
+.service:hover{
+    transform: translateY(-8px);
+
+    background: #1f1f1f;
+
+    box-shadow:
+        0 15px 35px rgba(255,140,0,0.15),
+        0 10px 25px rgba(46,204,113,0.15);
 }
 
-/* Two buttons container (Itinerary / Book) */
-.twobuttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
+.service:hover h3{
+    color: var(--orange);
 }
 
-/* Buttons */
-.twobuttons a { text-decoration: none; }
+/* MOBILE */
 
-.twobuttons button {
-  cursor: pointer;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+@media(max-width:768px){
+
+    .container{
+        width: 92%;
+    }
+
+    .container h1{
+        font-size: 2.8rem;
+    }
+
+    .container > p{
+        font-size: 1rem;
+    }
+
+    .service{
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .service h3{
+        font-size: 1.6rem;
+    }
+
+    .service p{
+        font-size: 1rem;
+    }
 }
-
-/* Primary (Book now) */
-.twobuttons a:nth-child(2) button,
-.twobuttons button.primary {
-  background: var(--accent);
-  color: var(--white);
-}
-
-/* Secondary (Itinerary) */
-.twobuttons a:nth-child(1) button,
-.twobuttons button.secondary {
-  background: var(--white);
-  color: var(--accent);
-  border: 1px solid rgba(255,106,0,0.12);
-}
-
-/* Button hover states */
-.twobuttons button:hover {
-  transform: translateY(-3px);
-  opacity: 0.98;
-}
-
-/* Make sure long texts don't break layout */
-.service .meta { font-size: 13px; color: #888; margin-top: 8px; }
-
-/* Responsive tweaks */
-@media (max-width: 920px) {
-  .container { margin: 20px auto; padding: 20px; }
-  .service img { height: 150px; }
-  .container > p{margin:auto;}
-}
-
-@media (max-width: 560px) {
-  .services { gap: 16px; }
-  .service img { height: 140px; }
-  .container > h1 { font-size: 24px; }
-  .twobuttons { gap: 8px; }
-}
-
-/* Accessibility / focus styles */
-.twobuttons button:focus {
-  outline: 3px solid rgba(255,106,0,0.18);
-  outline-offset: 3px;
-}
-
-/* Ensure this block does not affect footer styles:
-   - do NOT style footer selectors here
-   - keep everything scoped to .container / .services / .service
-*/

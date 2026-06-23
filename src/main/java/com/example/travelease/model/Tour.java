@@ -21,16 +21,30 @@ public class Tour{
     private String description;
     private String state;
 
+    // URL-friendly identifier used instead of numeric IDs in URLs.
+    private String slug;
+    private String imageUrl;
 
 
-    public Tour(String name, String description, String state) {
+
+    public Tour(String name, String description, String state,String slug,String imageUrl) {
         this.name = name;
         this.description = description;
         this.state = state;
+        this.slug=slug;
+        this.imageUrl=imageUrl;
     }
 
     // getters & setters
 
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public Long getId() {
         return id;
@@ -42,6 +56,14 @@ public class Tour{
 
     public String getName() {
         return name;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public void setName(String name) {

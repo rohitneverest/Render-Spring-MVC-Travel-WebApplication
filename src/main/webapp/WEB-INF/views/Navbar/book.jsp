@@ -83,9 +83,10 @@
 
 </section>
 
-
+<div class="bookcover">
     <div class="container">
         <h1>Book Your Tour</h1>
+        <p>Plan your perfect Northeast adventure with TravelEase.</p>
         <form action="payment" method="post">
 
             <input type="text" name="fullName" placeholder="Full Name" required>
@@ -94,71 +95,180 @@
 
       <select name="tourName" required>
 
-                     <option value="" disabled selected>Select a Tour</option>
+          <option value="" disabled
+              ${empty selectedTour ? 'selected' : ''}>
+              Select a Tour
+          </option>
 
-     //meghalaya
-                     <option value="Cherrapunji Adventure - 3 Days">Cherrapunji Adventure - 3 Days</option>
-                      <option value="Umiam Lake Retreat - 2 Days">Umiam Lake Retreat - 2 Days</option>
-                      <option value="Dawki & Shnongpdeng - 3 Days">Dawki & Shnongpdeng - 3 Days</option>
-                     <option value="Mawlynnong - Asia's Cleanest Village - 2 Days">Mawlynnong - Asia's Cleanest Village - 2 Days</option>
-                     <hr>
+          <!-- MEGHALAYA -->
+          <option value="Cherrapunji Adventure - 3 Days"
+              ${selectedTour == 'Cherrapunji Adventure - 3 Days' ? 'selected' : ''}>
+              Cherrapunji Adventure - 3 Days
+          </option>
 
-     //nagaland
+          <option value="Umiam Lake Retreat - 2 Days"
+              ${selectedTour == 'Umiam Lake Retreat - 2 Days' ? 'selected' : ''}>
+              Umiam Lake Retreat - 2 Days
+          </option>
 
-                     <option value="Kohima & War Cemetery - 2 Days">Kohima & War Cemetery - 2 Days</option>
-                     <option value="Hornbill Festival - 3 Days">Hornbill Festival - 3 Days</option>
-                     <option value="Dzukou Valley Trek - 2 Days">Dzukou Valley Trek - 2 Days</option>
-                     <option value="Mokokchung & Ao Naga Heritage - 3 Days">Mokokchung & Ao Naga Heritage - 3 Days</option>
-                     <hr>
+          <option value="Dawki & Shnongpdeng - 3 Days"
+              ${selectedTour == 'Dawki & Shnongpdeng - 3 Days' ? 'selected' : ''}>
+              Dawki & Shnongpdeng - 3 Days
+          </option>
 
-     //arunachal
+          <option value="Mawlynnong - Asia's Cleanest Village - 2 Days"
+              ${selectedTour == "Mawlynnong - Asia's Cleanest Village - 2 Days" ? 'selected' : ''}>
+              Mawlynnong - Asia's Cleanest Village - 2 Days
+          </option>
 
-                      <option value="Tawang Monastery - 4 Days">Tawang Monastery - 4 Days</option>
-                       <option value="Sela Pass & Lake - 2 Days">Sela Pass & Lake - 2 Days</option>
-                       <option value="Ziro Valley Eco-Tour - 3 Days">Ziro Valley Eco-Tour - 3 Days</option>
-                       <option value="Bomdila & Dirang - 3 Days">Bomdila & Dirang - 3 Days</option>
-                       <hr>
+          <!-- NAGALAND -->
+          <option value="Kohima & War Cemetery - 2 Days"
+              ${selectedTour == 'Kohima & War Cemetery - 2 Days' ? 'selected' : ''}>
+              Kohima & War Cemetery - 2 Days
+          </option>
 
-     //assam
-                     <option value="Kaziranga Safari - 2 Days">Kaziranga Safari - 2 Days</option>
-                      <option value="Majuli Island Getaway - 3 Days">Majuli Island Getaway - 3 Days</option>
-                      <option value="Guwahati & Kamakhya Temple - 2 Days">Guwahati & Kamakhya Temple - 2 Days</option>
-                      <option value="Tea Garden Experience - 2 Days">Tea Garden Experience - 2 Days</option>
-                      <hr>
+          <option value="Hornbill Festival - 3 Days"
+              ${selectedTour == 'Hornbill Festival - 3 Days' ? 'selected' : ''}>
+              Hornbill Festival - 3 Days
+          </option>
 
-     //manipur
+          <option value="Dzukou Valley Trek - 2 Days"
+              ${selectedTour == 'Dzukou Valley Trek - 2 Days' ? 'selected' : ''}>
+              Dzukou Valley Trek - 2 Days
+          </option>
 
-                    <option value="Loktak Lake & Phumdis - 2 Days">Loktak Lake & Phumdis - 2 Days</option>
-                     <option value="Imphal & Kangla Fort - 2 Days">Imphal & Kangla Fort - 2 Days</option>
-                     <option value="Ukhrul Valley Trek - 3 Days">Ukhrul Valley Trek - 3 Days</option>
-                     <option value="Keibul Lamjao Safari - 1 Day">Keibul Lamjao Safari - 1 Day</option>
-                    <hr>
+          <option value="Mokokchung & Ao Naga Heritage - 3 Days"
+              ${selectedTour == 'Mokokchung & Ao Naga Heritage - 3 Days' ? 'selected' : ''}>
+              Mokokchung & Ao Naga Heritage - 3 Days
+          </option>
 
-     //mizoram
+          <!-- ARUNACHAL -->
+          <option value="Tawang Monastery - 4 Days"
+              ${selectedTour == 'Tawang Monastery - 4 Days' ? 'selected' : ''}>
+              Tawang Monastery - 4 Days
+          </option>
 
-                     <option value="Aizawl City Tour - 2 Days">Aizawl City Tour - 2 Days</option>
-                     <option value="Vantawng Falls & Serchhip - 2 Days">Vantawng Falls & Serchhip - 2 Days</option>
-                     <option value="Reiek Tlang Trekking - 1 Day">Reiek Tlang Trekking - 1 Day</option>
-                     <option value="Phawngpui Blue Mountain - 3 Days">Phawngpui Blue Mountain - 3 Days</option>
-                     <hr>
-     //sikkim
+          <option value="Sela Pass & Lake - 2 Days"
+              ${selectedTour == 'Sela Pass & Lake - 2 Days' ? 'selected' : ''}>
+              Sela Pass & Lake - 2 Days
+          </option>
 
-                     <option value="Tsomgo Lake & Nathula Pass - 2 Days">Tsomgo Lake & Nathula Pass - 2 Days</option>
-                     <option value="Gangtok & Rumtek Monastery - 3 Days">Gangtok & Rumtek Monastery - 3 Days</option>
-                     <option value="Yuksom & Kanchenjunga Trek - 5 Days">Yuksom & Kanchenjunga Trek - 5 Days</option>
-                     <option value="Lachung & Yumthang Valley - 3 Days">Lachung & Yumthang Valley - 3 Days</option>
-                     <hr>
-     //tripura
+          <option value="Ziro Valley Eco-Tour - 3 Days"
+              ${selectedTour == 'Ziro Valley Eco-Tour - 3 Days' ? 'selected' : ''}>
+              Ziro Valley Eco-Tour - 3 Days
+          </option>
 
-                     <option value="Agartala & Ujjayanta Palace - 2 Days">Agartala & Ujjayanta Palace - 2 Days</option>
-                     <option value="Neermahal & Rudrasagar Lake - 1 Day">Neermahal & Rudrasagar Lake - 1 Day</option>
-                     <option value="Unakoti Rock Carvings - 2 Days">Unakoti Rock Carvings - 2 Days</option>
-                     <option value="Jampui Hills & Orange Festival - 3 Days">Jampui Hills & Orange Festival - 3 Days</option>
+          <option value="Bomdila & Dirang - 3 Days"
+              ${selectedTour == 'Bomdila & Dirang - 3 Days' ? 'selected' : ''}>
+              Bomdila & Dirang - 3 Days
+          </option>
 
+          <!-- ASSAM -->
+          <option value="Kaziranga Safari - 2 Days"
+              ${selectedTour == 'Kaziranga Safari - 2 Days' ? 'selected' : ''}>
+              Kaziranga Safari - 2 Days
+          </option>
 
-                 </select>
+          <option value="Majuli Island Getaway - 3 Days"
+              ${selectedTour == 'Majuli Island Getaway - 3 Days' ? 'selected' : ''}>
+              Majuli Island Getaway - 3 Days
+          </option>
 
+          <option value="Guwahati & Kamakhya Temple - 2 Days"
+              ${selectedTour == 'Guwahati & Kamakhya Temple - 2 Days' ? 'selected' : ''}>
+              Guwahati & Kamakhya Temple - 2 Days
+          </option>
 
+          <option value="Tea Garden Experience - 2 Days"
+              ${selectedTour == 'Tea Garden Experience - 2 Days' ? 'selected' : ''}>
+              Tea Garden Experience - 2 Days
+          </option>
+
+          <!-- MANIPUR -->
+          <option value="Loktak Lake & Phumdis - 2 Days"
+              ${selectedTour == 'Loktak Lake & Phumdis - 2 Days' ? 'selected' : ''}>
+              Loktak Lake & Phumdis - 2 Days
+          </option>
+
+          <option value="Imphal & Kangla Fort - 2 Days"
+              ${selectedTour == 'Imphal & Kangla Fort - 2 Days' ? 'selected' : ''}>
+              Imphal & Kangla Fort - 2 Days
+          </option>
+
+          <option value="Ukhrul Valley Trek - 3 Days"
+              ${selectedTour == 'Ukhrul Valley Trek - 3 Days' ? 'selected' : ''}>
+              Ukhrul Valley Trek - 3 Days
+          </option>
+
+          <option value="Keibul Lamjao Safari - 1 Day"
+              ${selectedTour == 'Keibul Lamjao Safari - 1 Day' ? 'selected' : ''}>
+              Keibul Lamjao Safari - 1 Day
+          </option>
+
+          <!-- MIZORAM -->
+          <option value="Aizawl City Tour - 2 Days"
+              ${selectedTour == 'Aizawl City Tour - 2 Days' ? 'selected' : ''}>
+              Aizawl City Tour - 2 Days
+          </option>
+
+          <option value="Vantawng Falls & Serchhip - 2 Days"
+              ${selectedTour == 'Vantawng Falls & Serchhip - 2 Days' ? 'selected' : ''}>
+              Vantawng Falls & Serchhip - 2 Days
+          </option>
+
+          <option value="Reiek Tlang Trekking - 1 Day"
+              ${selectedTour == 'Reiek Tlang Trekking - 1 Day' ? 'selected' : ''}>
+              Reiek Tlang Trekking - 1 Day
+          </option>
+
+          <option value="Phawngpui Blue Mountain - 3 Days"
+              ${selectedTour == 'Phawngpui Blue Mountain - 3 Days' ? 'selected' : ''}>
+              Phawngpui Blue Mountain - 3 Days
+          </option>
+
+          <!-- SIKKIM -->
+          <option value="Tsomgo Lake & Nathula Pass - 2 Days"
+              ${selectedTour == 'Tsomgo Lake & Nathula Pass - 2 Days' ? 'selected' : ''}>
+              Tsomgo Lake & Nathula Pass - 2 Days
+          </option>
+
+          <option value="Gangtok & Rumtek Monastery - 3 Days"
+              ${selectedTour == 'Gangtok & Rumtek Monastery - 3 Days' ? 'selected' : ''}>
+              Gangtok & Rumtek Monastery - 3 Days
+          </option>
+
+          <option value="Yuksom & Kanchenjunga Trek - 5 Days"
+              ${selectedTour == 'Yuksom & Kanchenjunga Trek - 5 Days' ? 'selected' : ''}>
+              Yuksom & Kanchenjunga Trek - 5 Days
+          </option>
+
+          <option value="Lachung & Yumthang Valley - 3 Days"
+              ${selectedTour == 'Lachung & Yumthang Valley - 3 Days' ? 'selected' : ''}>
+              Lachung & Yumthang Valley - 3 Days
+          </option>
+
+          <!-- TRIPURA -->
+          <option value="Agartala & Ujjayanta Palace - 2 Days"
+              ${selectedTour == 'Agartala & Ujjayanta Palace - 2 Days' ? 'selected' : ''}>
+              Agartala & Ujjayanta Palace - 2 Days
+          </option>
+
+          <option value="Neermahal & Rudrasagar Lake - 1 Day"
+              ${selectedTour == 'Neermahal & Rudrasagar Lake - 1 Day' ? 'selected' : ''}>
+              Neermahal & Rudrasagar Lake - 1 Day
+          </option>
+
+          <option value="Unakoti Rock Carvings - 2 Days"
+              ${selectedTour == 'Unakoti Rock Carvings - 2 Days' ? 'selected' : ''}>
+              Unakoti Rock Carvings - 2 Days
+          </option>
+
+          <option value="Jampui Hills & Orange Festival - 3 Days"
+              ${selectedTour == 'Jampui Hills & Orange Festival - 3 Days' ? 'selected' : ''}>
+              Jampui Hills & Orange Festival - 3 Days
+          </option>
+
+      </select>
 
 
             <!-- Hidden PayPal defaults -->
@@ -170,6 +280,7 @@
             <button type="submit">Book Now</button>
         </form>
 
+    </div>
     </div>
 
     <!-- Footer -->

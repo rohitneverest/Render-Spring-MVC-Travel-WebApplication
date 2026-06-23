@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.security.SecureRandom;
 import java.util.List;
@@ -117,6 +118,7 @@ public class AuthController {
 
             session.setAttribute("loggedIn", true);
             session.setAttribute("email", email);
+            session.setAttribute("successfullyLoggedInMsg","YOU ARE LOGGED IN.");
 
 
 
@@ -154,16 +156,22 @@ public class AuthController {
 
 
     @GetMapping("/logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session,
+                         RedirectAttributes redirectAttributes) {
 
         Boolean loggedIn =
                 (Boolean) session.getAttribute("loggedIn");
 
-        if(loggedIn == null || !loggedIn){
+        if (loggedIn == null || !loggedIn) {
             return "redirect:/";
         }
 
         session.invalidate();
+
+        redirectAttributes.addFlashAttribute(
+                "loggedOutMsg",
+                "YOU ARE LOGGED OUT."
+        );
 
         return "redirect:/";
     }
@@ -319,7 +327,7 @@ public class AuthController {
                 e.printStackTrace();
 
                 model.addAttribute(
-                        "error", "Unable to send OTP . There is some issue connecting with Brevo SMTP server."
+                        "error", "Unable to send OTP email. Please try again later."
                 );
 
                 return "Auth/forgotPassword";

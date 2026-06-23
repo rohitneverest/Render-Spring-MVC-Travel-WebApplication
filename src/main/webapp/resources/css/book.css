@@ -1,106 +1,170 @@
-/* ------------------------------------------------------
-   PAGE CONTAINER (Book Your Tour section)
-------------------------------------------------------- */
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 35px 40px;
-    border-radius: 12px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    border-left: 5px solid #ff8c00;
+:root{
+    --orange: #ff8c00;
+    --black: #0b0b0b;
+    --card: #171717;
+    --text: #ffffff;
+    --muted: #bbbbbb;
 }
 
-.container h1 {
+body {
+    background-image: url("/resources/images/northeastmap3.png");
+    background-size: cover;          /* makes image fill screen properly */
+    background-position: center;     /* keeps focus centered */
+    background-repeat: no-repeat;    /* avoids tiling */
+    background-attachment: fixed;    /* optional: nice desktop effect */
+    font-family: "Nunito", sans-serif;
+}
 
+/* Cover section */
+.bookcover{
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Main card */
+.container{
+    width: 100%;
+    max-width: 750px;
+
+    background-image: url("/resources/images/northeastmap2.png");
+    background-size: contain;
+    border-top:10px solid green;
+    border-left:10px solid orange;
+    border-right:10px solid orange;
+    border-bottom:10px solid white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+    position:absolute;
+    top:7rem;
+
+
+
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.5),
+        0 0 30px rgba(255,140,0,0.1);
 
     text-align: center;
-    margin-bottom: 20px;
-    color: #111;
-    font-size: 30px;
-    letter-spacing: 1px;
-    font-weight: 700;
 }
 
-/* ------------------------------------------------------
-   INPUT FIELDS
-------------------------------------------------------- */
-.container input[type="text"],
-.container input[type="email"],
-.container input[type="number"],
-.container input[type="tel"],
-.container select {
+/* Heading */
+.container h1{
+    color: black;
+    font-size: 4rem;
+    font-weight:bold;
+    padding:0px;
+
+
+    text-transform: uppercase;
+}
+
+/* Subtitle */
+.container p{
+    color: #282828;
+    font-size:1.5rem;
+    padding:0px
+
+}
+
+/* Form */
+.container form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top:20px;
+}
+
+/* Inputs */
+.container input,
+.container select{
     width: 100%;
-    padding: 12px 14px;
-    margin: 12px 0;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    background: #fafafa;
-    color: #333;
-    transition: 0.3s ease;
+    padding: 15px;
+
+    background: white;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 10px;
+
+    color: black;
+    font-size: 16px;
+    text-transform:none;
+
+    transition: 0.3s;
 }
 
+/* Placeholder */
+.container input::placeholder{
+    color: #999;
+}
+
+/* Focus */
 .container input:focus,
-.container select:focus {
-    border-color: #ff8c00;
-    box-shadow: 0 0 4px rgba(255, 140, 0, 0.4);
-    background: #fff;
+.container select:focus{
+    outline: none;
+    border:3px solid orange;
+    box-shadow: 0 0 10px rgba(255,140,0,0.3);
 }
 
-/* ------------------------------------------------------
-   SELECT DROPDOWN
-------------------------------------------------------- */
-.container select {
-    cursor: pointer;
+/* Dropdown options */
+.container select option{
+    background: #222;
+    color: white;
 }
 
-.container select option {
-    padding: 10px;
-    background: #fff;
-    color: #333;
-}
+/* Button */
+.container button{
+    padding: 15px;
 
-/* Remove <hr> inside <select> if browser draws lines */
-.container select hr {
-    display: none;
-}
+    background: green;
+    color: white;
 
-/* ------------------------------------------------------
-   SUBMIT BUTTON
-------------------------------------------------------- */
-.container button {
-    width: 100%;
-    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+
     font-size: 17px;
     font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    background: #ff8c00;
-    color: #fff;
+
     cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+
+    transition: 0.3s;
 }
 
-.container button:hover {
-    background: #cc7000;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+.container button:hover{
+    transform: translateY(-3px);
+    background: #ff9f1a;
+    box-shadow: 0 10px 25px rgba(255,140,0,0.3);
 }
 
-/* ------------------------------------------------------
-   FORM RESPONSIVE DESIGN
-------------------------------------------------------- */
-@media (max-width: 600px) {
-    .container {
-        width: 92%;
-        padding: 25px 20px;
+/* Mobile */
+@media (max-width: 768px){
+
+    .bookcover{
+        padding: 100px 15px 40px;
     }
 
-    .container h1 {
-        font-size: 24px;
+    .container{
+        padding: 30px 20px;
+    }
+
+    .container h1{
+        font-size: 2.2rem;
+    }
+
+    .container input,
+    .container select,
+    .container button{
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
     }
 }

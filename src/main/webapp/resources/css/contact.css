@@ -1,163 +1,118 @@
-/* contact.css
-   Scope: styles from .container → before footer
-   Theme: orange / black / white
-*/
-
-/* theme vars (kept consistent with other pages) */
 :root{
-  --accent: #ff6a00;      /* orange */
-  --dark:   #0b0b0b;      /* near black */
-  --muted:  #f7f7f7;      /* soft bg */
-  --white:  #ffffff;
-  --shadow: 0 14px 30px rgba(11,11,11,0.06);
+  --accent: #2e8b57;   /* green button */
+  --orange: #ff6a00;   /* heading text */
+  --black: #0b0b0b;
+  --white: #ffffff;
+  --gray: #555;
+  --shadow: 0 12px 30px rgba(11,11,11,0.08);
 }
 
+body{
+  background: black;
+  margin: 0;
+  font-family: 'Nunito', system-ui, Arial;
+}
 
-
-/* MAIN WRAPPER (keeps distance from navbar/slider) */
-.container {
-overflow:auto;
-display:flex;
-flex-direction:column;
-/*border:2px solid red;*/
-margin:3% auto;
-
-  max-width: 90vw;
-   /* top spacing avoids overlap with header/slider */
-  padding: 28px;
+/* MAIN CONTAINER (SAME AS REVIEW PAGE) */
+.container{
+  width: 90vw;
+  margin: 3% auto;
+   padding-top: 2rem;
+      padding-bottom:6rem;
+      padding-left:3rem;
+      padding-right:3rem;
   box-sizing: border-box;
-  background: linear-gradient(180deg, var(--white), #fff);
-  border-radius: 12px;
+
+  background: #151515;
+
   box-shadow: var(--shadow);
-  color: var(--dark);
-  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+   border-top:4px solid orange;
+border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* Page title + intro */
-.container > h1 {
-  margin: 0 auto;
-  font-size: 32px;
+/* CONTACT US TITLE (ORANGE TEXT ONLY) */
+.container > h1{
+  margin: auto;
+  font-size: 4rem;
   font-weight: 800;
-  color: var(--dark);
+  color: var(--orange);
 }
 
-.container > p {
-text-align:center;
-  margin: 0 auto;
-  color: #444;
-  line-height: 1.6;
+/* DESCRIPTION */
+.container > p{
+  margin: auto;
   font-size: 15px;
+  color: var(--white);
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-/* CONTACT FORM CARD (centered, modern) */
-.contact-form {
-  max-width: 760px;
-  margin: 0 auto;
-  background: linear-gradient(180deg, #fff, #fff);
-  border-radius: 12px;
+/* FORM (DARK CARD INSIDE LIGHT CONTAINER) */
+.contact-form{
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+
   padding: 20px;
-  box-shadow: 0 8px 26px rgba(11,11,11,0.05);
-  border-left: 6px solid var(--accent);
+  border-radius: 12px;
+
+  background: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* form layout: 2-column on desktop, single column on small screens */
-.contact-form form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 16px;
-}
-
-/* inputs, textarea */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea,
-.contact-form select {
+/* INPUTS */
+.contact-form input,
+.contact-form textarea{
   width: 100%;
   padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
   font-size: 14px;
-  box-sizing: border-box;
-  transition: border-color .12s ease, box-shadow .12s ease;
-}
-
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-  grid-column: 1 / -1; /* spans full width */
-}
-
-/* focus states */
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
   outline: none;
+}
+
+/* PLACEHOLDER */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color: #aaa;
+}
+
+/* TEXTAREA */
+.contact-form textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* FOCUS */
+.contact-form input:focus,
+.contact-form textarea:focus{
   border-color: var(--accent);
-  box-shadow: 0 8px 22px rgba(255,106,0,0.08);
+  box-shadow: 0 0 0 3px rgba(46,139,87,0.15);
 }
 
-/* placeholders slightly muted */
-.contact-form ::placeholder {
-  color: #9b9b9b;
-}
-
-/* submit button */
-.contact-form button[type="submit"] {
-  grid-column: 1 / -1;
+/* GREEN BUTTON */
+.contact-form button{
   padding: 12px 18px;
   background: var(--accent);
-  color: var(--white);
+  color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(255,106,0,0.14);
-  transition: transform .12s ease, opacity .12s ease;
+  transition: 0.2s ease;
+  align-self: flex-start;
 }
 
-.contact-form button[type="submit"]:hover {
+.contact-form button:hover{
   transform: translateY(-3px);
-  opacity: 0.98;
-}
-
-/* small helper text / note */
-.contact-form .note {
-  grid-column: 1 / -1;
-  font-size: 13px;
-  color: #666;
-  margin-top: 6px;
-}
-
-/* OPTIONAL: quick contact info block (if you later add one) */
-.contact-info {
-  margin-top: 20px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-info .info-card {
-  background: #111;
-  color: #fff;
-  padding: 12px 14px;
-  border-radius: 10px;
-  min-width: 180px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(11,11,11,0.08);
-}
-
-/* Responsive */
-@media (max-width: 880px) {
-  .container { margin: 20px auto; padding: 20px; }
-  .contact-form form { grid-template-columns: 1fr; }
-  .contact-form textarea { min-height: 110px; }
-  .contact-form button[type="submit"] { width: 100%; }
-}
-
-@media (max-width: 420px) {
-  .container { padding: 14px; }
-  .container > h1 { font-size: 24px; }
+  opacity: 0.95;
 }

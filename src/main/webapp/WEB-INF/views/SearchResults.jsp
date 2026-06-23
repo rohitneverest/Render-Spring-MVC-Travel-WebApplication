@@ -8,179 +8,52 @@
 
 
         <link rel="stylesheet" href="/resources/css/navbar.css">
+        <link rel="stylesheet" href="/resources/css/search.css">
+         <link rel="stylesheet" href="/resources/css/footer.css">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #eef2f7, #f7f9fc);
-            color: #1f2937;
-        }
 
-        /* ===== TOP SEARCH BAR ===== */
-        .top-bar {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255,255,255,0.75);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #e5e7eb;
-            padding: 18px;
-        }
-
-        .search-box {
-            max-width: 750px;
-            margin: auto;
-            display: flex;
-            gap: 10px;
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 14px 16px;
-            border-radius: 12px;
-            border: 1px solid #d1d5db;
-            font-size: 15px;
-            outline: none;
-            background: white;
-            transition: 0.2s;
-        }
-
-        .search-box input:focus {
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
-        }
-
-        .search-box button {
-            padding: 12px 18px;
-            border: none;
-            border-radius: 12px;
-            background: #6366f1;
-            color: white;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        /* ===== CONTAINER ===== */
-        .container {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        /* ===== HEADER ===== */
-        .header {
-            margin-bottom: 20px;
-        }
-
-        .header h2 {
-            font-size: 22px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .keyword {
-            color: #6366f1;
-        }
-
-        /* ===== RESULTS LIST ===== */
-        .results {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .result-card {
-            background: white;
-            border-radius: 14px;
-            padding: 18px 20px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-            transition: 0.25s ease;
-            border: 1px solid #f1f5f9;
-        }
-
-        .result-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        .title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #4f46e5;
-            cursor: pointer;
-            margin-bottom: 6px;
-        }
-
-        .title:hover {
-            text-decoration: underline;
-        }
-
-        .url {
-            font-size: 13px;
-            color: #16a34a;
-            margin-bottom: 8px;
-        }
-
-        .desc {
-            font-size: 14px;
-            color: #4b5563;
-            line-height: 1.5;
-        }
-
-        /* ===== NO RESULTS ===== */
-        .no-results {
-            background: #fff1f2;
-            color: #be123c;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: 500;
-        }
-
-        /* ===== PAGINATION ===== */
-        .pagination {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .pagination a,
-        .pagination span {
-            padding: 8px 14px;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-            text-decoration: none;
-            color: #374151;
-            background: white;
-            transition: 0.2s;
-        }
-
-        .pagination a:hover {
-            background: #6366f1;
-            color: white;
-            border-color: #6366f1;
-        }
-
-        .active {
-            background: #6366f1;
-            color: white !important;
-            border-color: #6366f1;
-        }
-
-    </style>
 </head>
 
 <body>
 
+
+<section class="navbar-section">
+     <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="/" class="logo"><span>T</span>ravel<span>E</span>ase</a>
+            <nav class="navbar">
+                          <a href="/"><b>home</b></a>
+                          <a href="/book"><b>book</b></a>
+                          <a href="/packages"><b>packages</b></a>
+                          <a href="/service"><b>service</b></a>
+                          <a href="/gallery"><b>gallery</b></a>
+                          <a href="/review"><b>review</b></a>
+                          <a href="/contact"><b>contact</b></a>
+            </nav>
+            <div class="icons">
+
+
+
+
+            </div>
+
+     </header>
+
+<script src="/resources/js/script.js"></script>
+
+
+
+</section>
 <!-- ===== SEARCH BAR ===== -->
 <div class="top-bar">
     <form class="search-box" action="/search" method="get">
         <input type="text" name="keyword" value="${keyword}" placeholder="Search destinations, tours...">
-        <button type="submit">Search</button>
+        <button type="submit"> <i class="fas fa-search" id="search-btn"></i></button>
     </form>
 </div>
+
+
+
 
 <!-- ===== RESULTS ===== -->
 <div class="container">
@@ -197,14 +70,12 @@
         <div class="results">
             <c:forEach items="${results}" var="tour">
 
-                <a href="/tour/details/${tour.id}" style="text-decoration:none;">
+                <a href="/itinerary/${tour.slug}" style="text-decoration:none;">
                     <div class="result-card">
 
                         <div class="title">${tour.name}</div>
 
-                        <div class="url">
-                            tourapp.app › explore › ${tour.name}
-                        </div>
+
 
                         <div class="desc">
                             ${tour.description}
@@ -242,6 +113,68 @@
     </div>
 
 </div>
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>TravelEase</h3>
+            <p>
+                Your trusted travel companion for discovering destinations,
+                planning trips and creating unforgettable memories.
+            </p>
+        </div>
+
+        <div class="footer-column" id="quicklinks">
+            <h3 >Quick Links</h3>
+
+            <a href="/">Home</a>
+            <a href="/packages">Packages</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p><i class="fas fa-envelope"></i> travelease353@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Shillong, Meghalaya</p>
+        </div>
+
+    </div>
+
+    <div class="social-icons">
+
+        <a href="https://www.linkedin.com/in/rohit200byte/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="/" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2024 TravelEase. All Rights Reserved.
+        </p>
+
+        <p>
+            <a href="/">Privacy Policy</a> |
+            <a href="/">Terms & Conditions</a>
+        </p>
+
+
+    </div>
+
+</footer>
 
 </body>
 </html>

@@ -1,142 +1,165 @@
-/* -------------------------------
-   gallery.css
-   Styles scope: .container (main content) → before footer
-   Theme: orange / black / white
-   ------------------------------- */
-
 :root{
-  --accent: #ff6a00;      /* orange */
-  --dark:   #0b0b0b;      /* near black */
-  --muted:  #f9f9f9;      /* soft light bg */
-  --white:  #ffffff;
-  --shadow: 0 12px 28px rgba(11,11,11,0.08);
+    --orange: #ff7a00;
+    --green: #2e8b57;
+    --black: #111111;
+    --dark: #1e1e1e;
+    --white: #ffffff;
+    --gray: #666;
+    --gray1: #151515;
 }
 
-/* Main container (keeps distance from navbar/slider) */
-.container {
-
-  overflow:auto;
-  display:flex;
-  flex-direction:column;
-  /*border:2px solid red;*/
-  margin:3% auto;
-
-    width: 90vw;
-  padding: 28px;
-  background: linear-gradient(180deg, var(--white), var(--white));
-  border-radius: 10px;
-  box-sizing: border-box;
+body{
+    background: var(--black);
 }
 
-/* Page title & intro */
-.container > h1 {
-  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--dark);
-  font-size: 30px;
-  margin: auto;
-  font-weight: 800;
+/* MAIN CONTAINER */
+
+.container{
+    width: 90%;
+    margin: 40px auto;
+    padding-top: 2rem;
+    padding-bottom:6rem;
+    padding-left:3rem;
+    padding-right:3rem;
+    background: linear-gradient(180deg, #1a1a1a, #151515);
+
+    border-top:4px solid orange;
+
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    border-radius: 25px;
 }
 
-.container > p {
-  margin: auto;
-  color: #555;
-  line-height: 1.6;
-  font-size: 15px;
+.container h1{
+    font-size: 4rem;
+    color: var(--orange);
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-/* Gallery grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  align-items: stretch;
+.container p{
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 40px;
 }
 
-/* Each thumbnail wrapper */
-.gallery a {
-  display: block;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: var(--shadow);
-  transition: transform .18s ease, box-shadow .18s ease;
-  border: 1px solid rgba(0,0,0,0.04);
-  background: #fff;
+/* TWO IMAGES PER ROW */
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-/* Hover zoom */
-.gallery a:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 44px rgba(11,11,11,0.12);
+/* IMAGE CARD */
+
+.gallery a{
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    background: var(--dark);
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border: 2px solid transparent;
 }
 
-/* Thumbnails */
-.gallery img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  vertical-align: middle;
+/* HOVER EFFECT (NO LINE ANYMORE) */
+
+.gallery a:hover{
+    transform: translateY(-8px);
+    border-color: var(--white);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.45),
+        0 0 20px rgba(255,122,0,0.25);
 }
 
-/* Lightbox (hidden by default, shown via :target) */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(11,11,11,0.9);
-  z-index: 1200;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+/* IMAGES */
+
+.gallery img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Show when targeted from the thumbnail anchor (#img1 etc.) */
-.lightbox:target {
-  display: flex;
+.gallery a:hover img{
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
 
-/* Large image inside lightbox */
-.lightbox img {
-  max-width: 92%;
-  max-height: 88%;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 22px 60px rgba(0,0,0,0.45);
-  border: 6px solid rgba(255,255,255,0.03);
+/* LIGHTBOX */
+
+.lightbox{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
-/* Close button */
-.lightbox .close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-size: 34px;
-  color: #fff;
-  text-decoration: none;
-  line-height: 1;
-  padding: 6px 10px;
-  background: rgba(255,106,0,0.12);
-  border-radius: 6px;
-  transition: background .12s ease, transform .12s ease;
+.lightbox:target{
+    display: flex;
 }
 
-.lightbox .close:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-  color: #fff;
+.lightbox img{
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 20px;
+    border: 6px solid white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-/* Small-screen tweaks */
-@media (max-width: 900px) {
-  .container { margin: 20px auto; padding: 20px; }
-  .gallery img { height: 150px; }
-  .lightbox img { max-height: 84%; }
+/* CLOSE BUTTON */
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
-@media (max-width: 480px) {
-  .gallery img { height: 120px; }
-  .lightbox .close { font-size: 28px; top: 12px; right: 12px; }
+.close:hover{
+    background: var(--green);
 }
 
-/* Keep everything scoped to .container / .gallery / .lightbox — no footer selectors changed */
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        width: 95%;
+        padding: 25px;
+    }
+
+    .container h1{
+        font-size: 2.2rem;
+    }
+
+    .container p{
+        font-size: 1.1rem;
+    }
+
+    .gallery img{
+        height: 250px;
+    }
+}

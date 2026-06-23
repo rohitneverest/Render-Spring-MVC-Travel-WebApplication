@@ -1,89 +1,182 @@
-/* -----------------------
-   Itinerary Section Style
-   Theme: Black • Orange • Red accents
-------------------------*/
-
 body {
-  background-color: #0e0e0e;
-  color: #f5f5f5;
-  font-family: 'Nunito', sans-serif;
   margin: 0;
-  padding: 0;
+  background: #0b0b0b;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Main Itinerary Container */
-.container {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 40px;
-  background: linear-gradient(145deg, #111, #1b1b1b);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 69, 0, 0.25);
-  border-top: 3px solid orange;
-  border-bottom: 3px solid red;
+/* FULL PAGE WRAPPER (NO FLOATING BOX) */
+.itinerary-page {
+  width: 100%;
 }
 
-/* Heading styles */
-.container h1 {
-  font-size: 36px;
-  color: orange;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-align: center;
+/* HERO ATTACHED TO NAVBAR */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 8%;
+  background: linear-gradient(90deg, #000 60%, #111);
+  border-bottom: 2px solid #FFA500;
 }
 
-.container p {
-  font-size: 17px;
-  color: #ddd;
-  text-align: center;
+.hero-left h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #FFA500;
+}
+
+.hero-left p {
+  margin-top: 10px;
+  color: #ccc;
+  max-width: 600px;
+}
+
+/* BOOK BUTTON (ORANGE + GREEN ACCENT) */
+.book-btn {
+  background: linear-gradient(135deg, #FFA500, #00c853);
+  color: black;
+  padding: 14px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0; /* sharp modern UI */
+  transition: 0.3s;
+  border-left: 5px solid #00c853;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* MAIN CONTENT SPLIT */
+.content {
+  display: flex;
+  padding: 40px 8%;
+  gap: 40px;
+}
+
+/* TIMELINE LEFT */
+.timeline {
+  flex: 2;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#FFA500, #00c853);
+}
+
+.day-block {
+  position: relative;
   margin-bottom: 30px;
+  padding: 20px;
+  background: #121212;
+  border-left: 3px solid transparent;
+  transition: 0.3s;
 }
 
-/* Day sections */
-.day {
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid orange;
-  padding: 25px 25px 20px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  transition: 0.3s ease;
+.day-block:hover {
+  transform: translateX(8px);
+  background: #161616;
 }
 
-.day:hover {
-  background: rgba(255, 69, 0, 0.08);
-  border-left: 4px solid red;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(255, 69, 0, 0.3);
+.marker {
+  position: absolute;
+  left: -18px;
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
 }
 
-.day h3 {
-  color: #ff4500;
-  font-size: 24px;
-  margin-bottom: 10px;
+.day-block.orange .marker {
+  background: #FFA500;
 }
 
-.day p {
+.day-block.green .marker {
+  background: #00c853;
+}
+
+.day-block h3 {
+  margin: 0 0 8px;
+}
+
+.day-block.orange h3 {
+  color: #FFA500;
+}
+
+.day-block.green h3 {
+  color: #00c853;
+}
+
+.day-block p {
   color: #ccc;
   line-height: 1.6;
-  font-size: 16px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .container {
-    padding: 25px;
+/* SIDE PANEL */
+.side-panel {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.panel-box {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #222;
+  border-top: 3px solid #00c853;
+}
+
+.panel-box h3 {
+  color: #FFA500;
+}
+
+.panel-box p {
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.panel-box span {
+  color: #00c853;
+}
+
+/* GREEN CTA */
+.green-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  text-align: center;
+  background: #00c853;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.green-btn:hover {
+  background: #00e676;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
   }
 
-  .container h1 {
-    font-size: 28px;
+  .side-panel {
+    position: static;
   }
 
-  .day h3 {
-    font-size: 20px;
-  }
-
-  .day p {
-    font-size: 15px;
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
 }

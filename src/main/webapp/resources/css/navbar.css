@@ -13,7 +13,9 @@
     text-decoration: none;
     transition: all .2s linear;
 }
-
+.box {
+    text-transform: none;
+}
 *::selection{
     background-color: var(--orange);
     color: #fff;
@@ -66,7 +68,11 @@ html{
     justify-content: space-between;
     padding: 2rem;
     width:100vw;
-    height:10vh;
+    height:11vh;
+
+
+
+
  }
  header .logo{
     font-size: 2.5rem;
@@ -109,12 +115,12 @@ header .icons i{
 
 
 header .search-bar-container {
-border:2px solid blue;
+
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     background: #333;
     border-top: .1rem solid rgba(255,255,255,0.2);
     display: flex;
@@ -126,6 +132,8 @@ border:2px solid blue;
 
 header .search-bar-container.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Reveals the search bar */
+
+
 }
 
 
@@ -144,10 +152,12 @@ header .search-bar-container label{
     cursor: pointer;
     font-size: 3rem;
     margin-left: 1.5rem;
+
 }
 
 header .search-bar-container label:hover{
     color: var(--orange);
+
 }
 .login-form-container {
   position: fixed;
@@ -295,6 +305,7 @@ color:white;
     width: 100%;
     position: relative;
 
+
 }
 
 #search-bar {
@@ -303,13 +314,14 @@ color:white;
     padding: 10px 15px;
     font-size: 16px;
 
+
 }
 
 .search-bar-container button {
     height: 45px;       /* SAME height as input */
     width: 50px;        /* Adjust for design */
     border: none;
-    background: #0097b2;   /* Nice color */
+    background: #1fd655;
     color: white;
     cursor: pointer;
     font-size: 20px;
@@ -317,6 +329,22 @@ color:white;
     align-items: center;
     justify-content: center;
     border-radius: 0 5px 5px 0; /* Rounded right side */
+
+}
+
+.search-bar-container button:hover {
+    height: 45px;       /* SAME height as input */
+    width: 50px;        /* Adjust for design */
+    border: none;
+    background: #00ab41;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0; /* Rounded right side */
+
 }
 
 
@@ -365,15 +393,22 @@ header { box-sizing: border-box; }
   }
 
   /* when JS toggles .active it becomes visible */
-  header .navbar.active { display: flex; }
+  header .navbar.active { display: flex;
+   padding:0px;
+   margin:0px;
+   font-size: 1.2rem;
+
+   }
 
   /* link styles adapt to stacked layout but keep colours */
   header .navbar a {
     display: block;
     width: 100%;
-    padding: .9rem 1rem;
-    font-size: 1.7rem;
-    border-radius: .35rem;
+    margin-left:0.85rem;
+    font-size: 1.2rem;
+
+
+
   }
 
   /* push icons to right so they remain visible */
@@ -421,6 +456,23 @@ header {
   overflow: visible; /* allow dropdown to expand normally */
 }
 
+
+header .search-bar-container {
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden initially */
+    transition: clip-path 0.5s ease;
+}
+
 }
 /* logged in */
 
@@ -448,10 +500,11 @@ header .icons{
     align-items:center;
     justify-content:center;
 
-    background:#FFA500;
-    color:white;
+    background:orange;
+    color:black;
     font-size:1.7rem;
-    font-weight:700;
+    font-weight:1000;
+    font-size:3rem;
 
     text-decoration:none;
 
@@ -463,4 +516,70 @@ header .icons{
 .profile-avatar:hover{
     transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(255,165,0,.45);
+    background:#1fd655;
+}
+
+
+
+
+
+.success-toast {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #22c55e;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    z-index: 9999;
+
+    animation: slideIn 0.4s ease;
+}
+
+
+
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+
+.logout-toast {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #ef4444;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    z-index: 9999;
+
+    animation: slideIn 0.4s ease;
 }

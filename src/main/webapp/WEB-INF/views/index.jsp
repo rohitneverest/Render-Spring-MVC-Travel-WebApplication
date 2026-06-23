@@ -61,6 +61,37 @@
                        ></button>
            </form>
      </header>
+     <c:if test="${not empty sessionScope.successfullyLoggedInMsg}">
+         <div class="success-toast">
+             ${sessionScope.successfullyLoggedInMsg}
+         </div>
+
+         <%
+             session.removeAttribute("successfullyLoggedInMsg");
+         %>
+     </c:if>
+     <c:if test="${not empty loggedOutMsg}">
+         <div class="logout-toast">
+             ${loggedOutMsg}
+         </div>
+     </c:if>
+
+     <script>
+         setTimeout(() => {
+             const toast = document.querySelector(".success-toast");
+             if (toast) {
+                 toast.style.display = "none";
+             }
+         }, 2000);
+     </script>
+     <script>
+         setTimeout(() => {
+             const toast = document.querySelector(".logout-toast");
+             if (toast) {
+                 toast.style.display = "none";
+             }
+         }, 2000);
+     </script>
 
     <div class="login-form-container ${showLogin ? 'active' : ''}">
         <i class="fas fa-times" id="form-close"></i>
@@ -76,7 +107,7 @@
             <div class="check">
             <input type="checkbox" id="remember">
             <label for="remember">Remember me!</label></div>
-            <p>forgot password? <a href="/auth/forgot-password">click here</a></p>
+            <p>forget password? <a href="/auth/forgot-password">click here</a></p>
             <p>don't have an account? <a href="/auth/registration">register now</a></p>
         </form>
     </div>
