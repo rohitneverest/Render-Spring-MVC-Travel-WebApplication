@@ -327,7 +327,7 @@ public class AuthController {
                 e.printStackTrace();
 
                 model.addAttribute(
-                        "error", "Unable to send OTP email. Please try again later."
+                        "error", "Unable to send OTP . There is some issue connecting with Brevo SMTP server."
                 );
 
                 return "Auth/forgotPassword";

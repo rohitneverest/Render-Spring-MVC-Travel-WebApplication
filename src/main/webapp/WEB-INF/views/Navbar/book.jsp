@@ -87,7 +87,7 @@
     <div class="container">
         <h1>Book Your Tour</h1>
         <p>Plan your perfect Northeast adventure with TravelEase.</p>
-        <form action="payment" method="post">
+        <form action="/payment" method="post">
 
             <input type="text" name="fullName" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
