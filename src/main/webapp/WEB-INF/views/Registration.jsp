@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 
-    <link rel="stylesheet" href="/resources/css/navbar.css">
+    <link rel="stylesheet" href="/resources/css/search.css">
     <link rel="stylesheet" href="/resources/css/registration.css">
     <link rel="stylesheet" href="/resources/css/footer.css">
 
@@ -22,19 +22,21 @@
 </head>
 
 <body>
+<div class="boss">
 
-<section class="navbar-section">
-     <header>
-            <div id="menu-bar" class="fas fa-bars"></div>
-            <a href="/" class="logo"><span>T</span>ravel<span>E</span>ase</a>
-            <nav class="navbar">
-                <a href="/"><b>home</b></a>
+<header>
 
-
-            </nav>
+    <a href="/" class="logo">
+        <span>T</span>ravel<span>E</span>ase
+    </a>
 
 
-</section>
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+    </nav>
+
+</header>
 
 
 
@@ -129,7 +131,7 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
-
+</div>
 
 
 <script src="/resources/js/script.js"></script>

@@ -1,6 +1,44 @@
+
+
+:root{
+    --orange: #ffa500;
+    --blue: #0d6efd;
+    --dark-blue: #084298;
+    --white: #ffffff;
+    --light: #f4f8fc;
+    --text: #333;
+}
+
+
+
+
+
  /* Registration Section Theme */
+
+
+
+
         body {
+
+
+
             background: #1e1e1e;
+
+        }
+
+        html,body{
+        height:100%;
+        margin:0;
+        }
+
+        .boss{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        }
+
+        .register-section{
+          flex:1;
         }
 
         .register-section {
@@ -103,28 +141,9 @@
 
 
 
- header .navbar a{
-    color: white !important;
-    font-size: 2.5rem ;
-    padding:2px;
 
-    text-decoration:none;
 
-    border-radius:5px;
 
-    background:#D12300;
- }
-
- header .navbar a:hover {
-     color: white !important;
-        font-size: 2.5rem ;
-        padding:2px;
-
-        text-decoration:none;
-
-        border-radius:6px;
-
-        background:#A31B00;
 
 
 

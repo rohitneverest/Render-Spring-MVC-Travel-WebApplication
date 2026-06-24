@@ -28,6 +28,7 @@ html{
 
 }
 
+
 .error{
     color:red;
     margin-bottom:10px;
@@ -56,6 +57,7 @@ html{
 .navbar-section{
 
 }
+
 
  header{
  background:brown;
@@ -125,7 +127,7 @@ header .search-bar-container {
     border-top: .1rem solid rgba(255,255,255,0.2);
     display: flex;
     align-items: center;
-    z-index: 1001;
+     z-index: 10001;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden initially */
     transition: clip-path 0.5s ease;
 }
@@ -304,6 +306,7 @@ color:white;
     align-items: center;
     width: 100%;
     position: relative;
+     z-index: 10001;
 
 
 }
@@ -313,6 +316,7 @@ color:white;
     height: 45px;       /* You can adjust */
     padding: 10px 15px;
     font-size: 16px;
+
 
 
 }
@@ -396,7 +400,7 @@ header { box-sizing: border-box; }
   header .navbar.active { display: flex;
    padding:0px;
    margin:0px;
-   font-size: 1.2rem;
+   font-size: 1.3rem;
 
    }
 
@@ -468,7 +472,7 @@ header .search-bar-container {
     border-top: .1rem solid rgba(255,255,255,0.2);
     display: flex;
     align-items: center;
-    z-index: 1001;
+     z-index: 10001;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden initially */
     transition: clip-path 0.5s ease;
 }

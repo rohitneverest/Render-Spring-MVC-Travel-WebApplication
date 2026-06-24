@@ -7,12 +7,26 @@
 }
 
 body {
-    background-image: url("/resources/images/northeastmap3.png");
+    background-image: url("https://www.hectindia.com/_next/image?url=https%3A%2F%2Fstatic.hectindia.com%2F0000%2F1%2F2026%2F01%2F22%2Fnortheast-indias-hidden-gems-7-must-visit-destinations-in-2026-majuli-tawang-and-beyond.webp&w=1920&q=75");
     background-size: cover;          /* makes image fill screen properly */
     background-position: center;     /* keeps focus centered */
     background-repeat: no-repeat;    /* avoids tiling */
     background-attachment: fixed;    /* optional: nice desktop effect */
     font-family: "Nunito", sans-serif;
+}
+
+html,body{
+height:100%;
+margin:0;
+}
+
+.boss{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+.container{
+flex:1;
 }
 
 /* Cover section */
@@ -31,7 +45,7 @@ body {
 
     margin: 0 auto;
 
-    background-image: url("/resources/images/northeastmap2.png");
+    background:black;
     background-size: cover;
     background-position: center;
 
@@ -52,7 +66,7 @@ body {
 
 /* Heading */
 .container h1{
-    color: black;
+    color: white;
     font-size: 4rem;
     font-weight:bold;
     padding:0px;
@@ -63,7 +77,7 @@ body {
 
 /* Subtitle */
 .container p{
-    color: #282828;
+    color: orange;
     font-size:1.5rem;
     padding:0px
 

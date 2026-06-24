@@ -41,11 +41,11 @@ body > footer {
   width: 100%;
   height: auto;
 }
-.container{
+.icontainer{
 position:relative;
 
 }
-.container .slide {
+.icontainer .slide {
   /*border:2px solid yellow;*/
   position: absolute; /* Now the absolute items are inside this container */
   top:0px;
@@ -54,7 +54,7 @@ position:relative;
   overflow: hidden; /* prevents items from spilling outside */
 
 }
-.container .slide .item {
+.icontainer .slide .item {
 
   width: 200px;
   height: 70%;
@@ -387,7 +387,28 @@ header{
 }
 
 
+@media (max-width: 480px) {
+.item .content {
+/*background:red;*/
+flex-shrink:1;
 
+word-wrap:break-word;
+
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 20vmax;
+  height:50vmax;
+
+  height:auto;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;  /*doesnt display the the others content*/
+}
+
+}
 
 
 

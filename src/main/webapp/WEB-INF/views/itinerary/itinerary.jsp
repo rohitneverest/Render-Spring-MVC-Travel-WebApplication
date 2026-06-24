@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="boss">
 
 
 <section class="navbar-section">
@@ -224,7 +225,7 @@
 
 
 
-
+</div>
    <script src="/resources/js/script.js"></script>
 
 </body>

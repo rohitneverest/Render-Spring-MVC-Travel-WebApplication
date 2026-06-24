@@ -23,7 +23,7 @@
 
 <body>
 
-
+<div class="boss">
 <section class="navbar-section">
      <header>
             <div id="menu-bar" class="fas fa-bars"></div>
@@ -180,7 +180,7 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
-
+</div>
 
 
 <script src="/resources/js/script.js"></script>

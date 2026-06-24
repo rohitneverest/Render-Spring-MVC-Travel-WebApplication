@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="boss">
 
 
 <section class="navbar-section">
@@ -182,7 +183,7 @@
          <i class="fas fa-arrow-up"></i>
      </button>
 
-
+</div>
 
 
      <script src="/resources/js/script.js"></script>

@@ -1,3 +1,6 @@
+
+
+
 package com.example.travelease.controller;
 
 import com.example.travelease.DTO.LoginResponseDTO;
@@ -327,7 +330,7 @@ public class AuthController {
                 e.printStackTrace();
 
                 model.addAttribute(
-                        "error", "Unable to send OTP . There is some issue connecting with Brevo SMTP server."
+                        "error", "Unable to send OTP . There is some issue connecting with SMTP server."
                 );
 
                 return "Auth/forgotPassword";
@@ -364,3 +367,4 @@ public class AuthController {
     }
 
 }
+

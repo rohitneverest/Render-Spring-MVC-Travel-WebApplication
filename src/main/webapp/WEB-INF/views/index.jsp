@@ -26,7 +26,7 @@
 <section class="navbar-section">
      <header>
             <div id="menu-bar" class="fas fa-bars"></div>
-            <a href="/" class="logo"><span>T</span>ravel<span>E</span>ase</a>
+            <a href="/" class="logo"><span>T</span>ravel<span>E</span>ast</a>
             <nav class="navbar">
                           <a href="/"><b>home</b></a>
                           <a href="/book"><b>book</b></a>
@@ -126,7 +126,7 @@
 
 
 
-    <div class="container">
+    <div class="icontainer">
         <div class="slide">
             <div class="item"
                  style="background-image: url(https://i0.wp.com/travelmynation.in/wp-content/uploads/2020/06/sunset-1113547_1920.jpg);">
@@ -252,7 +252,7 @@
 <!-- content  -->
 <div class="protect">
 <section class="visit-country-section">
-    <div class="container">
+    <div class="icontainer">
         <div class="section-heading">
             <h2>Explore Our Top Destinations</h2>
             <p>Discover the beauty and culture of Northeast India. Your adventure awaits!</p>

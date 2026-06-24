@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="boss">
 
 <section class="navbar-section">
      <header>
@@ -171,7 +172,8 @@
 
 
 
-       <script src="/resources/js/script.js"></script>
 
+</div>
+<script src="/resources/js/script.js"></script>
 </body>
 </html>
