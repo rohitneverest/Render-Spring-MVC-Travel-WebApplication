@@ -1,5 +1,11 @@
 /* Footer */
+
+.footer-column:last-child p:first-of-type{
+    text-transform: lowercase;
+}
+
 .site-footer {
+
 
 
     color: #fff;
@@ -57,6 +63,7 @@
     margin:auto;
     text-align:left;
 }
+
 
 .footer-column{
     flex:1;

@@ -30,7 +30,7 @@
         <input type="text"
                name="keyword"
                value="${keyword}"
-               placeholder="Search destinations, tours...">
+               placeholder="Find tours by name, location, state, or trip duration (e.g., Kaziranga, 3 Days, Meghalaya)...">
 
         <button type="submit">
             <i class="fas fa-search"></i>

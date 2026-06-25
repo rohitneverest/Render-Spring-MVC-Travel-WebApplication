@@ -98,10 +98,10 @@
         <form action="/auth/signin" method="POST">
            <c:if test="${not empty loginError}">
             <p class="error">${loginError}</p>
-           </c:if>
+            </c:if>
             <h3>login</h3>
-            <input name="email" type="email" class="box" placeholder="enter your email">
-            <input name="password" type="password" class="box" placeholder="enter your password ">
+            <input name="email" type="email" class="box" placeholder="Enter your email">
+            <input name="password" type="password" class="box" placeholder="Enter your password ">
             <input type="submit" value="login now" class="btn" >
             <!-- <a href="/" class="btn">login now</a> -->
             <div class="check">
