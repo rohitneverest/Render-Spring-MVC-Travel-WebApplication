@@ -26,8 +26,13 @@ public class HomeController {
     TourService tourService;
 
 
-    @RequestMapping("/")
-    public String index(){
+    @GetMapping("/")
+    public String index(@CookieValue(value = "rememberEmail", required = false) String rememberedEmail,
+                        Model model) {
+
+        model.addAttribute("rememberedEmail",
+                rememberedEmail);
+
         return "index";
     }
 

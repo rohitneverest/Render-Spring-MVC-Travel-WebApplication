@@ -1,6 +1,3 @@
-
-
-
 package com.example.travelease.controller;
 
 import com.example.travelease.DTO.LoginResponseDTO;
@@ -8,6 +5,8 @@ import com.example.travelease.Repo.UsersRepo;
 import com.example.travelease.model.Users;
 import com.example.travelease.service.AuthService;
 import com.example.travelease.service.EmailService;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,6 +106,8 @@ public class AuthController {
     @PostMapping("signin")
     public String login(@RequestParam String email,
                         @RequestParam String password,
+                        @RequestParam(required = false) String remember,
+                        HttpServletResponse response,
                         HttpSession session,
                         Model model) {
 
@@ -123,7 +124,12 @@ public class AuthController {
             session.setAttribute("email", email);
             session.setAttribute("successfullyLoggedInMsg","YOU ARE LOGGED IN.");
 
-
+            if (remember != null) {
+                Cookie cookie = new Cookie("rememberEmail", email);
+                cookie.setMaxAge(60 * 60 * 24 * 30); // 30 days
+                cookie.setPath("/");
+                response.addCookie(cookie);
+            }
 
             return "redirect:/";
 
@@ -159,8 +165,10 @@ public class AuthController {
 
 
     @GetMapping("/logout")
-    public String logout(HttpSession session,
-                         RedirectAttributes redirectAttributes) {
+    public String logout(
+            HttpSession session,
+            HttpServletResponse response,
+            RedirectAttributes redirectAttributes) {
 
         Boolean loggedIn =
                 (Boolean) session.getAttribute("loggedIn");
@@ -168,6 +176,11 @@ public class AuthController {
         if (loggedIn == null || !loggedIn) {
             return "redirect:/";
         }
+
+//        Cookie cookie = new Cookie("rememberEmail", null);
+//        cookie.setMaxAge(0);
+//        cookie.setPath("/");
+//        response.addCookie(cookie);
 
         session.invalidate();
 
@@ -367,4 +380,3 @@ public class AuthController {
     }
 
 }
-

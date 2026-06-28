@@ -100,13 +100,13 @@
             <p class="error">${loginError}</p>
             </c:if>
             <h3>login</h3>
-            <input name="email" type="email" class="box" placeholder="Enter your email">
-            <input name="password" type="password" class="box" placeholder="Enter your password ">
+            <input name="email" type="email" class="box" placeholder="Enter your email" value="${not empty param.email ? param.email : rememberedEmail}">
+            <input name="password" type="password" class="box" placeholder="Enter your password">
             <input type="submit" value="login now" class="btn" >
-            <!-- <a href="/" class="btn">login now</a> -->
             <div class="check">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember me!</label></div>
+              <input type="checkbox" id="remember"  name="remember" ${not empty rememberedEmail ? 'checked' : ''}>
+              <label for="remember">Remember my email!</label>
+            </div>
             <p>forget password? <a href="/auth/forgot-password">click here</a></p>
             <p>don't have an account? <a href="/auth/registration">register now</a></p>
         </form>
