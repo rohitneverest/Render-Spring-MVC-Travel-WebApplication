@@ -166,8 +166,34 @@ Docker support
 Deployment on AWS / Heroku
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-📸 Screenshots
-   
-<img width="1920" height="892" alt="homepage" src="https://github.com/user-attachments/assets/4803e38c-ad75-426f-bd54-d0f7e9da3379" />
+📈 ✨✨✨✨✨ ✨✨✨✨ RECENTLY ADDED FEATURES AND IMPROVEMENTS✨✨✨✨✨✨✨✨✨✨✨
+
+Added profile editing functionality.
+
+Added password change feature.
+
+Implemented Forgot Password using OTP.
+
+Integrated Brevo SMTP for email delivery.
+
+Improved authentication workflow.
+
+Enhanced responsive design across devices.
+
+Fixed multiple mobile UI issues.
+
+Optimized navigation bar and footer responsiveness.
+
+Improved search page layout.
+
+Enhanced exception handling and validation.
+
+Refactored authentication-related code.
+
+Improved user experience with clearer validation and feedback messages.
+
+Added production deployment configuration for Render.
+
+Reduced lines of code.
 
 
